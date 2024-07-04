@@ -1,0 +1,22 @@
+.wrapper {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+}
+
+.bullet {
+    border: solid blue 2px;
+    border-radius: 100%;
+    width: 8px;
+    height: 8px;
+}
+
+.active {
+    background-color: blue;
+}

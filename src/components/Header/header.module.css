@@ -1,0 +1,31 @@
+.wrapper ul, .listsWrapper, .wrapper {
+    display: flex;
+}
+
+.listsWrapper {
+    gap: 25px;
+}
+
+.logoLetter {
+    color: blue;
+    font-size: 45px;
+}
+
+.wrapper ul {
+    gap: 8px;
+    align-items: center;
+}
+
+.wrapper {
+    justify-content: space-between;
+    padding: 3px 10px;
+}
+
+.wrapper li {
+    color: blue;
+    letter-spacing: -0.3px;
+}
+
+.wrapper a {
+    color: blue
+}
