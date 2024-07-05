@@ -1,0 +1,16 @@
+.lineWrapper {
+    color: var(--color-neutral);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 0.7rem;
+    padding: 5px;
+}
+
+.title {
+    width: 100%;
+    color: var(--color-secondary);
+    font-size: 35px;
+    line-height: 1.3;
+}

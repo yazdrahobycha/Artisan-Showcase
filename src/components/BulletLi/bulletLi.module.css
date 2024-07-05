@@ -8,15 +8,17 @@
     width: auto;
     overflow: visible;
     background: transparent;
+    color: var(--color-secondary);
 }
 
 .bullet {
-    border: solid blue 2px;
+    border: solid var(--color-secondary) 2px;
     border-radius: 100%;
     width: 8px;
     height: 8px;
+
 }
 
 .active {
-    background-color: blue;
+    background-color: var(--color-secondary);
 }

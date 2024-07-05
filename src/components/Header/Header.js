@@ -1,12 +1,12 @@
 "use client";
-import React, { useState } from "react";
+import React, { forwardRef, useEffect, useState, useRef } from "react";
 import styles from "./header.module.css";
 import Link from "next/link";
 import BulletLi from "../BulletLi";
 
-function Header({ setDisplayType, displayType }) {
+function Header({ setDisplayType, displayType, showSeparator }, ref) {
   return (
-    <header>
+    <header ref={ref} className={styles.header}>
       <div className={styles.wrapper}>
         <div className={styles.logoLetter}>C</div>
         <div className={styles.listsWrapper}>
@@ -33,8 +33,9 @@ function Header({ setDisplayType, displayType }) {
         </div>
         <div className={styles.logoLetter}>G</div>
       </div>
+      {showSeparator && <div className={styles.separator} />}
     </header>
   );
 }
 
-export default Header;
+export default forwardRef(Header);
