@@ -4,7 +4,16 @@ import styles from "./header.module.css";
 import Link from "next/link";
 import BulletLi from "../BulletLi";
 
-function Header({ setDisplayType, displayType, showSeparator }, ref) {
+function Header(
+  {
+    displayType,
+    showSeparator,
+    setStartExitAnimation,
+    delayedHandleDisplayChange,
+    startExitAnimation,
+  },
+  ref
+) {
   return (
     <header ref={ref} className={styles.header}>
       <div className={styles.wrapper}>
@@ -14,7 +23,12 @@ function Header({ setDisplayType, displayType, showSeparator }, ref) {
             {["List", "Display"].map((itemsType) => (
               <BulletLi
                 className={styles.listItem}
-                onClick={() => setDisplayType(itemsType)}
+                onClick={() => {
+                  setStartExitAnimation(true);
+                  if (!startExitAnimation) {
+                    delayedHandleDisplayChange(itemsType);
+                  }
+                }}
                 active={displayType === itemsType}
                 key={itemsType}
               >

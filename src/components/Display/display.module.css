@@ -1,0 +1,20 @@
+.wrapper {
+    width: 100%;
+}
+
+.displayItem {
+    position: relative;
+    padding: 10px 10px 50px;
+    /* border-top: 2px solid var(--color-secondary); */
+}
+.displayItem:last-child {
+    /* border-bottom: 2px solid var(--color-secondary); */
+}
+
+.imgContainer {
+    margin-top: 20px;
+    padding: 23%;
+    position: relative; 
+    width: 100%; 
+    padding-bottom: 20%;
+}

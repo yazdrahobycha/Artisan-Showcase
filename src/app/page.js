@@ -6,13 +6,23 @@ import styles from "./page.module.css";
 import Header from "@/components/Header";
 import { useRef, useState } from "react";
 import useTopBottomIntersection from "@/hooks/useTopBottomIntersection";
+import { useDelayedCallback } from "@/hooks/useDelayedCallback";
 
 export default function Home() {
   const [displayType, setDisplayType] = useState("List");
-  const mainRef = useRef();
+  const [startExitAnimation, setStartExitAnimation] = useState(false);
+  const mainRef = useRef(); 
   const headerRef = useRef();
   const isHeaderOnMain = useTopBottomIntersection(mainRef, headerRef, 40);
 
+
+const delayedHandleDisplayChange = useDelayedCallback(handleDisplayChange, 1000);
+
+  function handleDisplayChange(type) {
+    setDisplayType(type);
+    setStartExitAnimation(false);
+  }
+  // const debounced = useDebouncedCallback(handleDisplayChange, [], 2000, 2000);
   const ItemsTag = displayType === "List" ? List : Display;
   return (
     <>
@@ -20,10 +30,12 @@ export default function Home() {
         showSeparator={isHeaderOnMain}
         ref={headerRef}
         displayType={displayType}
-        setDisplayType={setDisplayType}
+        delayedHandleDisplayChange={delayedHandleDisplayChange}
+        startExitAnimation={startExitAnimation}
+        setStartExitAnimation={setStartExitAnimation}
       />
       <main ref={mainRef} className={styles.main}>
-        <ItemsTag />
+        <ItemsTag startExitAnimation={startExitAnimation} />
       </main>
     </>
   );

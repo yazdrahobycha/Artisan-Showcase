@@ -1,9 +1,18 @@
 "use client";
 import React from "react";
-import { AnimatePresence, motion, spring } from "framer-motion";
+import { motion } from "framer-motion";
 import styles from "./animatedseparator.module.css";
 
-function AnimatedSeparator({ delay = 0, stiffness = 50, damping = 2 }) {
+function AnimatedSeparator({
+  delay = 0,
+  stiffness = 50,
+  damping = 2,
+  cancelAnimation,
+}) {
+  if (cancelAnimation) {
+    return <div className={styles.separator}></div>;
+  }
+
   return (
     <motion.div
       key={"separator" + delay}
@@ -23,6 +32,14 @@ function AnimatedSeparator({ delay = 0, stiffness = 50, damping = 2 }) {
       }}
       exit={{
         width: 0,
+        transition: {
+          width: {
+            type: "spring",
+            stiffness,
+            damping,
+            delay,
+          },
+        },
       }}
       className={styles.separator}
     />
