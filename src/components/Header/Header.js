@@ -7,7 +7,7 @@ import BulletLi from "../BulletLi";
 function Header(
   {
     displayType,
-    showSeparator,
+    showSeparator = true,
     setStartExitAnimation,
     delayedHandleDisplayChange,
     startExitAnimation,
