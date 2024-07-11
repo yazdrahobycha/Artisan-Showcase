@@ -6,11 +6,13 @@ import BulletLi from "../BulletLi";
 
 function Header(
   {
-    displayType,
+    // displayType,
+    // showSeparator = true,
+    // setStartExitAnimation,
+    // delayedHandleDisplayChange,
+    // startExitAnimation,
     showSeparator = true,
-    setStartExitAnimation,
-    delayedHandleDisplayChange,
-    startExitAnimation,
+    children,
   },
   ref
 ) {
@@ -19,23 +21,7 @@ function Header(
       <div className={styles.wrapper}>
         <div className={styles.logoLetter}>C</div>
         <div className={styles.listsWrapper}>
-          <ul>
-            {["List", "Display"].map((itemsType) => (
-              <BulletLi
-                className={styles.listItem}
-                onClick={() => {
-                  setStartExitAnimation(true);
-                  if (!startExitAnimation) {
-                    delayedHandleDisplayChange(itemsType);
-                  }
-                }}
-                active={displayType === itemsType}
-                key={itemsType}
-              >
-                {itemsType}
-              </BulletLi>
-            ))}
-          </ul>
+          {children}
           <ul>
             <li className={styles.listItem}>
               <Link href="./">About</Link>
