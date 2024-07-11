@@ -1,0 +1,14 @@
+.Listwrapper {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.Listwrapper li {
+    color: var(--color-secondary);
+    letter-spacing: -0.3px;
+}
+
+.Listwrapper a {
+    color: var(--color-secondary)
+}

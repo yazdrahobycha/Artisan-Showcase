@@ -1,21 +1,8 @@
-"use client";
-import React, { forwardRef, useEffect, useState, useRef } from "react";
+import React, { forwardRef } from "react";
 import styles from "./header.module.css";
 import Link from "next/link";
-import BulletLi from "../BulletLi";
 
-function Header(
-  {
-    // displayType,
-    // showSeparator = true,
-    // setStartExitAnimation,
-    // delayedHandleDisplayChange,
-    // startExitAnimation,
-    showSeparator = true,
-    children,
-  },
-  ref
-) {
+function Header({ showSeparator = true, children }, ref) {
   return (
     <header ref={ref} className={styles.header}>
       <div className={styles.wrapper}>
