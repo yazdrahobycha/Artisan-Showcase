@@ -7,7 +7,6 @@ import Header from "@/components/Header";
 import { useRef, useState } from "react";
 import useTopBottomIntersection from "@/hooks/useTopBottomIntersection";
 import { useDelayedCallback } from "@/hooks/useDelayedCallback";
-import BulletLi from "@/components/BulletLi";
 import ChooseViewList from "@/components/ChooseViewList";
 
 export default function Home() {

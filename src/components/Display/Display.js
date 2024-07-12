@@ -5,6 +5,7 @@ import { PLACEHOLDER_DATA } from "@/constans";
 import Link from "next/link";
 import Title from "../Title";
 import AnimatedSeparator from "../AnimatedSeparator";
+import ImgContainer from "../ImgContainer";
 
 function Display() {
   return (
@@ -12,23 +13,23 @@ function Display() {
       {PLACEHOLDER_DATA.map((entry, i, arr) => {
         return (
           <React.Fragment key={entry.name + i}>
-            <AnimatedSeparator delay={i === 0 ? 0.5 : 0.08 * i} stiffness={30} damping={10} />
+            <AnimatedSeparator
+              delay={i === 0 ? 0.5 : 0.08 * i}
+              stiffness={30}
+              damping={10}
+            />
             <div className={styles.displayItem}>
               <Link href={`/${entry.name}`}>
                 <Title>{entry.name}</Title>
-                <div className={styles.imgContainer}>
-                  <Image
-                    src={`/img/${entry.name}.png`}
-                    alt="Picture of the author"
-                    fill
-                    style={{ objectFit: "contain" }}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
-                </div>
+                <ImgContainer
+                  style={{ padding: "23%", marginTop: '20px' }}
+                  src={`/img/${entry.name}.png`}
+                  alt={`Picture of the ${entry.name} furniture`}
+                />
               </Link>
             </div>
             {i === arr.length - 1 && (
-              <AnimatedSeparator delay={0.08 * i} stiffness={10} damping={3}/>
+              <AnimatedSeparator delay={0.08 * i} stiffness={10} damping={3} />
             )}
           </React.Fragment>
         );

@@ -4,6 +4,7 @@ export const COLORS = {
   "--color-primary": "#F9EBDE",
   "--color-secondary": "#815854",
   "--color-neutral": "#3D3A35",
+  "--color-secondary-transparent": "rgba(129, 88, 84, 0.2)",
 };
 
 export const PLACEHOLDER_DATA = [

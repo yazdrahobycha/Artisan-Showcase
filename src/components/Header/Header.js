@@ -11,10 +11,10 @@ function Header({ showSeparator = true, children }, ref) {
           {children}
           <ul>
             <li className={styles.listItem}>
-              <Link href="./">About</Link>
+              <Link href="./about">About</Link>
             </li>
             <li className={styles.listItem}>
-              <Link href="./Press">Press</Link>
+              <Link href="./press">Press</Link>
             </li>
           </ul>
         </div>

@@ -1,4 +1,10 @@
 .lineWrapper {
+    background-color: var(--color-primary);
+    border: none;
+    cursor: pointer;
+}
+
+.lineWrapper a {
     color: var(--color-neutral);
     width: 100%;
     display: flex;
@@ -6,4 +12,27 @@
     gap: 15px;
     font-size: 0.7rem;
     padding: 5px;
+    text-align: left;
+}
+
+.inline a {
+    font-size: 0.8rem;
+    gap: 0px;
+}
+
+.inline h2 {
+    font-size: 1.7rem; 
+}
+
+.inline {
+    /* color: var(--color-neutral); */
+    background-color: var(--color-secondary-transparent);
+    position: sticky;
+    top: var(--header-height);
+    z-index: 99;
+    backdrop-filter: blur(4px);
+}
+
+.inline .client,.inline .year {
+    margin-right: 20px 
 }
