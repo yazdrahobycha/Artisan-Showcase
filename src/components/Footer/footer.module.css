@@ -15,3 +15,14 @@ padding-bottom: 20px;
 gap: 15px;
 letter-spacing: -0.5px;
 }
+
+.wrapper::-moz-selection, .wrapper li::-moz-selection, .wrapper a::-moz-selection {
+    /* Code for Firefox */
+    color: var(--color-secondary);
+    background: var(--color-primary);
+}
+
+.wrapper::selection, .wrapper li::selection, .wrapper a::selection {
+    color: var(--color-secondary);
+    background: var(--color-primary);
+}

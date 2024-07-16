@@ -10,7 +10,7 @@ function Footer() {
             <a href="mailto:ars.yar24@gmail.com">Email</a>
           </li>
           <li>
-            <a href="https://www.instagram.com/ozzy.mnt/"></a>Instagram
+            <a href="https://www.instagram.com/ozzy.mnt/">Instagram</a>
           </li>
         </ul>
         Artisan Crafter based in Kolomyya

@@ -78,3 +78,14 @@ ul {
   color: var(--color-primary);
   text-decoration: none;
  }
+
+ ::-moz-selection {
+   /* Code for Firefox */
+   color: var(--color-secondary);
+   background: none;
+ }
+
+ ::selection {
+   color: var(--color-secondary);
+   background: none;
+ }
