@@ -1,0 +1,29 @@
+.imgWrapper {
+    padding: 8vw;
+}
+
+.wrapper {
+    padding-top: 50px;
+}
+
+.wrapper h3 {
+    font-size: 8vw;
+    color: var(--color-secondary);
+    margin: 0.9em 0px 0.7em;
+}
+
+.wrapper p {
+    color: var(--color-neutral);
+    font-size: 4vw;
+    line-height: 4.5vw;
+    margin-bottom: 4.2vw;
+}
+
+.infoWrapper {
+    padding: 10px;
+}
+
+.listWrapper p {
+    margin: 5vw 0;
+    font-size: 4.2vw;
+}

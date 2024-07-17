@@ -3,8 +3,8 @@ import React, { useRef, useEffect } from "react";
 import styles from "./page.module.css";
 import ListLine from "@/components/ListLine";
 import { PLACEHOLDER_DATA } from "@/constans";
-import Image from "next/image";
 import ImgContainer from "@/components/ImgContainer";
+import ItemDescription from "@/components/ItemDescription";
 
 export default function Home({ params }) {
   const listLineRef = useRef();
@@ -13,8 +13,7 @@ export default function Home({ params }) {
     const updateHeaderHeight = () => {
       if (listLineRef.current) {
         const containerTop = listLineRef.current.getBoundingClientRect().top;
-        const headerHeight = containerTop - window.scrollY;
-        console.log(headerHeight);
+        const headerHeight = containerTop + window.scrollY;
         document.documentElement.style.setProperty(
           "--header-height",
           `${headerHeight}px`
@@ -40,41 +39,7 @@ export default function Home({ params }) {
         startExitAnimation={true}
         itemData={entry}
       />
-      <ImgContainer
-        style={{ padding: "23%" }}
-        src={`/img/${entry.name}.png`}
-        alt={`Picture of the ${entry.name} furniture`}
-      />
-      <ImgContainer
-        style={{ padding: "23%" }}
-        src={`/img/${entry.name}.png`}
-        alt={`Picture of the ${entry.name} furniture`}
-      />
-      <ImgContainer
-        style={{ padding: "23%" }}
-        src={`/img/${entry.name}.png`}
-        alt={`Picture of the ${entry.name} furniture`}
-      />
-      <ImgContainer
-        style={{ padding: "23%" }}
-        src={`/img/${entry.name}.png`}
-        alt={`Picture of the ${entry.name} furniture`}
-      />
-      <ImgContainer
-        style={{ padding: "23%" }}
-        src={`/img/${entry.name}.png`}
-        alt={`Picture of the ${entry.name} furniture`}
-      />
-      <ImgContainer
-        style={{ padding: "23%" }}
-        src={`/img/${entry.name}.png`}
-        alt={`Picture of the ${entry.name} furniture`}
-      />
-      <ImgContainer
-        style={{ padding: "23%" }}
-        src={`/img/${entry.name}.png`}
-        alt={`Picture of the ${entry.name} furniture`}
-      />
+        <ItemDescription entry={entry}/>
     </main>
     // <div>{props.itemName} product!</d`iv>
   );
