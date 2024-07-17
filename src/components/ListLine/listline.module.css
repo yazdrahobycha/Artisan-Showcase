@@ -1,10 +1,10 @@
 .lineWrapper {
     background-color: var(--color-primary);
     border: none;
-    cursor: pointer;
 }
 
-.lineWrapper a {
+.secondLineWrapper {
+    cursor: pointer;
     color: var(--color-neutral);
     width: 100%;
     display: flex;
@@ -15,7 +15,11 @@
     text-align: left;
 }
 
-.inline a {
+.lineWrapper a {
+    cursor: pointer;
+}
+
+.inline .secondLineWrapper {
     font-size: 0.8rem;
     gap: 0px;
 }

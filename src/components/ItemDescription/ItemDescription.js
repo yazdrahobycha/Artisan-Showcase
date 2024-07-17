@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./itemdescription.module.css";
 import ImgContainer from "../ImgContainer";
 import AnimatedSeparator from "../AnimatedSeparator";
+
 function ItemDescription({ entry }) {
   return (
     <div className={styles.wrapper}>

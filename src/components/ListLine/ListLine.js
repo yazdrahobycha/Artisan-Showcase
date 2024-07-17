@@ -7,17 +7,19 @@ import Title from "../Title";
 import Link from "next/link";
 
 function ListLine({ itemData, index, startExitAnimation, inline }, ref) {
+  const WrapperTag = inline ? "div" : Link;
+
   return (
     <div
       ref={ref}
       className={`${styles.lineWrapper} ${inline ? styles.inline : ""}`}
     >
-      <Link href={`/${itemData.name}`}>
+      <WrapperTag className={styles.secondLineWrapper} href={!inline && `/${itemData.name}`}>
         <Title>{itemData.name}</Title>
         <div className={styles.client}>{itemData.client}</div>
         <div className={styles.year}>{itemData.year}</div>
         <div className={styles.category}>{itemData.category}</div>
-      </Link>
+      </WrapperTag>
       <AnimatePresence>
         {!startExitAnimation && (
           <AnimatedSeparator delay={0.08 * index} stiffness={20} damping={7} />
