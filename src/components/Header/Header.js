@@ -2,7 +2,7 @@ import React, { forwardRef } from "react";
 import styles from "./header.module.css";
 import Link from "next/link";
 
-function Header({ showSeparator = true, children }, ref) {
+function Header({ showSeparator = true, children, endSlot }, ref) {
   return (
     <header ref={ref} className={styles.header}>
       <div className={styles.wrapper}>
@@ -21,6 +21,7 @@ function Header({ showSeparator = true, children }, ref) {
         <div className={styles.logoLetter}>G</div>
       </div>
       {showSeparator && <div className={styles.separator} />}
+      {endSlot}
     </header>
   );
 }

@@ -20,6 +20,7 @@
     justify-content: space-between;
     padding: 3px 10px;
     color: var(--color-secondary);
+    background-color: var(--color-primary);
 }
 
 .wrapper li {
@@ -36,7 +37,6 @@
     position: sticky;
     top: 0;
     left: 0;
-    background-color: var(--color-primary);
 }
 
 .separator {
