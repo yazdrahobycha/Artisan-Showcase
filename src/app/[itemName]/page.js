@@ -8,7 +8,7 @@ export default function Home({ params }) {
   return (
     <main className={styles.main}>
       <ItemDescription entry={entry} />
-      <Gallery />
+      <Gallery imagesNum={entry.imagesNum} entryName={entry.name} />
     </main>
   );
 }

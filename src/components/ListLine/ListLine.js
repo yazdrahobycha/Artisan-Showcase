@@ -14,7 +14,10 @@ function ListLine({ itemData, index, startExitAnimation, inline }, ref) {
       ref={ref}
       className={`${styles.lineWrapper} ${inline ? styles.inline : ""}`}
     >
-      <WrapperTag className={styles.secondLineWrapper} href={!inline && `/${itemData.name}`}>
+      <WrapperTag
+        className={styles.secondLineWrapper}
+        href={!inline ? `/${itemData.name}` : undefined}
+      >
         <Title>{itemData.name}</Title>
         <div className={styles.client}>{itemData.client}</div>
         <div className={styles.year}>{itemData.year}</div>

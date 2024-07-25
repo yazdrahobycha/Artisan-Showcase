@@ -11,6 +11,7 @@ function ItemDescription({ entry }) {
           style={{ padding: "45%" }}
           src={`/img/${entry.name}.png`}
           alt={`Picture of the ${entry.name} furniture`}
+          priority
         />
       </div>
       <div className={styles.infoWrapper}>

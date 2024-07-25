@@ -89,3 +89,7 @@ ul {
    color: var(--color-secondary);
    background: none;
  }
+
+ .new-line {
+  white-space: pre-line;
+ }
