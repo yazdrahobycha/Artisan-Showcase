@@ -5,36 +5,31 @@ import UtilityLink from "../UtilityLink";
 import Title from "../Title";
 import AnimatedSeparator from "../AnimatedSeparator";
 import ImgContainer from "../ImgContainer";
+import Grid from "../Grid";
+import GridItem from "../GridItem";
 
 function Display() {
   return (
-    <div className={styles.wrapper}>
-      {PLACEHOLDER_DATA.map((entry, i, arr) => {
+    <Grid>
+      {PLACEHOLDER_DATA.map((entry, i) => {
         return (
-          <React.Fragment key={entry.name + i}>
-            <AnimatedSeparator
-              delay={i === 0 ? 0.5 : 0.08 * i}
-              stiffness={30}
-              damping={10}
-            />
+          <GridItem>
             <div className={styles.displayItem}>
-              <UtilityLink href={`/${entry.name}`}>
-                <Title>{entry.name}</Title>
-                <ImgContainer
-                  style={{ padding: "23%", marginTop: '20px' }}
-                  src={`/img/${entry.name}.png`}
-                  alt={`Picture of the ${entry.name} furniture`}
-                />
-              </UtilityLink>
+            <UtilityLink href={`/${entry.name}`}>
+              <Title>{entry.name}</Title>
+              <ImgContainer
+                style={{ padding: "23%", marginTop: "20px" }}
+                src={`/img/${entry.name}.png`}
+                alt={`Picture of the ${entry.name} furniture`}
+              />
+            </UtilityLink>
             </div>
-            {i === arr.length - 1 && (
-              <AnimatedSeparator delay={0.08 * i} stiffness={10} damping={3} />
-            )}
-          </React.Fragment>
+          </GridItem>
         );
       })}
-    </div>
+    </Grid>
   );
 }
+
 
 export default Display;

@@ -1,3 +1,14 @@
+import wallpaperImg from "../public/img/press/wallpaper.jpg";
+import damnImg from "../public/img/press/damn.jpg";
+import iconImg from "../public/img/press/icon.jpg";
+import interiorDesignImg from "../public/img/press/interior-design.jpg";
+import minimalissimoImg from "../public/img/press/minimalissimo.jpg";
+import neueImg from "../public/img/press/neue.jpg";
+import sightUnseenImg from "../public/img/press/sight-unseen.jpg";
+import styleparkImg from "../public/img/press/stylepark.png";
+import wallpaperNovImg from "../public/img/press/wallpaper-nov.jpg";
+import weltImg from "../public/img/press/welt.png";
+
 export const BLOG_TITLE = "Artisan ShowCase";
 
 export const COLORS = {
@@ -112,3 +123,66 @@ export const ABOUT_DATA = {
     ],
   },
 };
+
+export const PRESS_DATA = [
+  {
+    name: "Wallpaper Magazine",
+    date: "Jun 2022",
+    link: "https://www.wallpaper.com/design/june-2022-issue-read-more",
+    image: wallpaperImg,
+  },
+  {
+    name: "Neue Luzerner News Paper",
+    date: "Mar 2022",
+    link: "https://www.youtube.com/watch?v=Y-Ckib3EZJI&ab_channel=ClassiConDesign",
+    image: neueImg,
+  },
+  {
+    name: "Sight Unseen Year Book",
+    date: "2021",
+    link: "https://www.sightunseen.com/2022/02/sight-unseen-yearbook-2021/",
+    image: sightUnseenImg,
+  },
+  {
+    name: "Interior Design",
+    date: "Dec 2021",
+    link: "https://interiordesign.net/products/ortegaguijarro-principals-explore-the-origins-of-the-sol-side-table-they-created-for-classicon/",
+    image: interiorDesignImg,
+  },
+  {
+    name: "Wallpaper Magazine",
+    date: "Nov 2021",
+    link: "https://pocketmags.com/us/wallpaper-magazine/nov-2021",
+    image: wallpaperNovImg,
+  },
+  {
+    name: "Minimalissimo.com",
+    date: "Nov 2021",
+    link: "https://minimalissimo.com/articles/sol-side-table",
+    image: minimalissimoImg,
+  },
+  {
+    name: "Icon Magazine \nGermany",
+    date: "Oct 2021",
+    link: "https://img.welt.de/bin/ICON-234360494.pdf",
+    image: iconImg,
+  },
+  {
+    name: "Damn Magazine",
+    date: "Spring 2021",
+    link: "https://www.damnmagazine.net/",
+    image: damnImg,
+  },
+  {
+    name: "Welt am Sonntag",
+    date: "Jan 2021",
+    link: "/",
+    image: weltImg,
+  },
+  {
+    name: "Stylepark",
+    date: "March 2022",
+    link: "https://www.alexortegastudio.com/2022/03/16/stylepark-selected-award2021/",
+    image: styleparkImg,
+  },
+];
