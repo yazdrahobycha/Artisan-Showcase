@@ -4,6 +4,11 @@
 
 .listsWrapper {
     gap: 25px;
+
+}
+
+.withBackBtn {
+    gap: 90px;
 }
 
 .logoLetter {

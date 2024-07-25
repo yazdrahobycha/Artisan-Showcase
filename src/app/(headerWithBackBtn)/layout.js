@@ -1,11 +1,11 @@
 import Header from "@/components/Header";
-import Link from "next/link";
+import BackBtn from "@/components/BackBtn";
 
 export default function Layout({ children }) {
   return (
     <>
-      <Header>
-        <Link href="/">Back</Link>
+      <Header withBackBtn>
+        <BackBtn />
       </Header>
       {children}
     </>

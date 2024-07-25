@@ -1,5 +1,6 @@
 import React from "react";
-import styles from  './footer.module.css'
+import styles from "./footer.module.css";
+import UtilityLink from "../UtilityLink";
 
 function Footer() {
   return (
@@ -7,10 +8,12 @@ function Footer() {
       <div className={styles.wrapper}>
         <ul className={styles.list}>
           <li>
-            <a href="mailto:ars.yar24@gmail.com">Email</a>
+            <UtilityLink href="mailto:ars.yar24@gmail.com">Email</UtilityLink>
           </li>
           <li>
-            <a href="https://www.instagram.com/ozzy.mnt/">Instagram</a>
+            <UtilityLink href="https://www.instagram.com/ozzy.mnt/">
+              Instagram
+            </UtilityLink>
           </li>
         </ul>
         Artisan Crafter based in Kolomyya

@@ -4,10 +4,10 @@ import styles from "./listline.module.css";
 import AnimatedSeparator from "../AnimatedSeparator";
 import { AnimatePresence } from "framer-motion";
 import Title from "../Title";
-import Link from "next/link";
+import UtilityLink from "../UtilityLink";
 
 function ListLine({ itemData, index, startExitAnimation, inline }, ref) {
-  const WrapperTag = inline ? "div" : Link;
+  const WrapperTag = inline ? "div" : UtilityLink;
 
   return (
     <div

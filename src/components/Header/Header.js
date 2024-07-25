@@ -1,20 +1,25 @@
 import React, { forwardRef } from "react";
 import styles from "./header.module.css";
-import Link from "next/link";
+import UtilityLink from "../UtilityLink";
+import { px } from "framer-motion";
 
-function Header({ showSeparator = true, children, endSlot }, ref) {
+function Header({ showSeparator = true, children, endSlot, withBackBtn }, ref) {
   return (
     <header ref={ref} className={styles.header}>
       <div className={styles.wrapper}>
         <div className={styles.logoLetter}>C</div>
-        <div className={styles.listsWrapper}>
+        <div
+          className={`${styles.listsWrapper} ${
+            withBackBtn ? styles.withBackBtn : ""
+          }`}
+        >
           {children}
           <ul>
             <li className={styles.listItem}>
-              <Link href="./about">About</Link>
+              <UtilityLink href="./about">About</UtilityLink>
             </li>
             <li className={styles.listItem}>
-              <Link href="./press">Press</Link>
+              <UtilityLink href="./press">Press</UtilityLink>
             </li>
           </ul>
         </div>
