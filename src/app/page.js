@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import List from "@/components/List";
 import Display from "@/components/Display";
 import styles from "./page.module.css";
@@ -14,7 +13,7 @@ export default function Home() {
   const [startExitAnimation, setStartExitAnimation] = useState(false);
   const mainRef = useRef();
   const headerRef = useRef();
-  const isHeaderOnMain = useTopBottomIntersection(mainRef, headerRef, 40);
+  const isHeaderOnMain = useTopBottomIntersection(mainRef, headerRef, 0);
 
   const delayedHandleDisplayChange = useDelayedCallback(
     handleDisplayChange,

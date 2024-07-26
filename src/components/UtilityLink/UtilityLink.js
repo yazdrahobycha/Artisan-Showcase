@@ -1,9 +1,23 @@
-import React from "react";
+"use client";
+import React, { memo, useContext, useId } from "react";
 import Link from "next/link";
+import { UpdateCustomPointerContext } from "../CustomPointerProvider";
 
 function UtilityLink({ children, asButton, ...params }) {
-  const Tag = asButton ? 'button' : Link
-  return <Tag {...params}>{children}</Tag>;
+  const setHovered = useContext(UpdateCustomPointerContext);
+  const Tag = asButton ? "button" : Link;
+  const id = useId();
+  console.log("rerender" + " " + id);
+
+  return (
+    <Tag
+      onMouseLeave={() => setHovered(false)}
+      onMouseEnter={() => setHovered(true)}
+      {...params}
+    >
+      {children}
+    </Tag>
+  );
 }
 
-export default UtilityLink;
+export default memo(UtilityLink);

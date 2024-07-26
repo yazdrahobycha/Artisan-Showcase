@@ -1,3 +1,4 @@
+// images for press data
 import wallpaperImg from "../public/img/press/wallpaper.jpg";
 import damnImg from "../public/img/press/damn.jpg";
 import iconImg from "../public/img/press/icon.jpg";
