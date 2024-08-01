@@ -1,0 +1,42 @@
+.logoLetterWrapper {
+    color: var(--color-secondary);
+    font-size: 10vw;
+    line-height: 1;    
+    position: relative;
+    overflow: hidden;
+    /* flex-grow: 1;
+    flex-basis: 0; */
+}
+.logoLetterWrapper span {
+    display: inline-block;
+}
+
+.mainLetter {
+    position: relative;
+    background-color: var(--color-primary);
+    z-index: 10;
+}
+
+.slided {
+    position: relative;
+    z-index: 9;
+}
+
+@media (min-width: 600px) {
+    .logoLetterWrapper {
+        font-size: 8vw;
+    }
+}
+
+@media (min-width: 768px) {
+    .logoLetterWrapper {
+        font-size: 6vw;
+    }
+}
+
+@media (min-width: 1024px) {
+    .logoLetterWrapper {
+        font-size: 4.5vw;
+        line-height: 0.9;
+    }
+}

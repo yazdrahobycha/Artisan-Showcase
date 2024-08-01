@@ -6,12 +6,11 @@ import { UpdateCustomPointerContext } from "../CustomPointerProvider";
 function UtilityLink({ children, asButton, ...params }) {
   const setHovered = useContext(UpdateCustomPointerContext);
   const Tag = asButton ? "button" : Link;
-  const id = useId();
-  console.log("rerender" + " " + id);
 
   return (
     <Tag
       onMouseLeave={() => setHovered(false)}
+      onClick={() => setHovered(false)}
       onMouseEnter={() => setHovered(true)}
       {...params}
     >

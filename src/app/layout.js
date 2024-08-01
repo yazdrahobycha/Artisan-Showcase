@@ -1,9 +1,13 @@
+import dynamic from "next/dynamic";
 import localFont from "next/font/local";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import { COLORS } from "@/constans";
 import CustomPointerProvider from "@/components/CustomPointerProvider";
-import CustomPointer from "@/components/CustomPointer";
+const CustomPointer = dynamic(() => import("../components/CustomPointer"), {
+  ssr: false,
+});
+
 const fkDisplayAlt = localFont({
   src: "../../public/fonts/FKDisplay-Regular.ttf",
 });
