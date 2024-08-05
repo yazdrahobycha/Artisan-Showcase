@@ -15,6 +15,8 @@
     text-align: left;
 }
 
+
+
 .inline .secondLineWrapper {
     font-size: 0.8rem;
     gap: 0px;
@@ -36,4 +38,39 @@
 
 .inline .client,.inline .year {
     margin-right: 20px 
+}
+
+@media (min-width: 600px) {
+    .secondLineWrapper div {
+        font-size: 3vw;
+        line-height: 2;
+    }
+    .secondLineWrapper {
+        row-gap: 0px;
+    }
+}
+
+@media (min-width: 768px) {
+    .secondLineWrapper div {
+        font-size: 1.5vw;
+        line-height: 1.4;
+    }
+
+    .secondLineWrapper {
+        display: grid;
+        grid-template-columns: 50% 2.5fr 1fr 1fr;
+        padding: 9px 24px 8px;
+    }
+
+    .category {
+        text-align: right;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .secondLineWrapper div {
+        font-size: 1rem;
+        line-height: 2;
+    }
 }

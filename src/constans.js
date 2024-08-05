@@ -187,3 +187,10 @@ export const PRESS_DATA = [
     image: styleparkImg,
   },
 ];
+
+export const COLUMN_NAMES = {
+  title: "",
+  category: "Category",
+  year: "Year",
+  client: "Client",
+};

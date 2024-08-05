@@ -6,13 +6,18 @@ import { AnimatePresence } from "framer-motion";
 import Title from "../Title";
 import UtilityLink from "../UtilityLink";
 
-function ListLine({ itemData, index, startExitAnimation, inline }, ref) {
+function ListLine(
+  { itemData, index, startExitAnimation, inline, columnClass = "" },
+  ref
+) {
   const WrapperTag = inline ? "div" : UtilityLink;
 
   return (
     <div
       ref={ref}
-      className={`${styles.lineWrapper} ${inline ? styles.inline : ""}`}
+      className={`${styles.lineWrapper} ${
+        inline ? styles.inline : ""
+      } ${columnClass}`}
     >
       <WrapperTag
         className={styles.secondLineWrapper}

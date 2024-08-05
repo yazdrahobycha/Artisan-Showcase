@@ -3,3 +3,7 @@
     align-items: center;
     gap: 5px;
 }
+
+.wrapper svg {
+    max-width: fit-content;
+}

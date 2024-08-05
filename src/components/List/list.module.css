@@ -1,3 +1,19 @@
 .listWrapper {
     width: 100%;
 }
+/* .columnNames {
+    color: var(--color-secondary) !important;
+    background-color: var(--color-primary) !important;
+} */
+
+.columnNames div {
+    color: var(--color-secondary) !important;
+    background-color: var(--color-primary) !important;
+    gap: 15px !important;
+}
+
+@media (max-width: 768px) {
+    .columnNames div {
+        display: none;
+    }
+}
