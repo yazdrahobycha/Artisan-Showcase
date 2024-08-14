@@ -1,0 +1,11 @@
+ .separator {
+     height: 100%;
+     background-color: var(--color-secondary);
+     width: 2px;
+ }
+
+ @media (max-width: 768px) {
+    .separator {
+        display: none;
+    }
+ }

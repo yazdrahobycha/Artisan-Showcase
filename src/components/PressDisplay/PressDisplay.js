@@ -5,6 +5,7 @@ import Grid from "../Grid";
 import GridItem from "../GridItem";
 import Image from "next/image";
 import OverlayTitle from "../OverlayTitle";
+import styles from "./pressdisplay.module.css";
 
 function PressDisplay() {
   const [currentEntry, setCurrentEntry] = useState(null);
@@ -33,23 +34,21 @@ function PressDisplay() {
         observer.disconnect();
       }
     };
-
   }, []);
 
   return (
-    <Grid>
+    <Grid columnNum={3}>
       {PRESS_DATA.map((entry) => {
         return (
-          <GridItem key={entry.name+entry.date}>
+          <GridItem key={entry.name + entry.date}>
             <div
               ref={(ref) => imagesRefsArray.current.push(ref)}
               data-name={entry.name}
               data-date={entry.date}
-              style={{padding: '21vw'}}
-              // className={styles.itemWrapper}
+              className={styles.itemWrapper}
             >
               <Image
-                style={{ objectFit: "cover", height: "auto" }}
+                className={styles.itemImage}
                 alt={entry.name}
                 src={entry.image}
               />
@@ -57,7 +56,7 @@ function PressDisplay() {
           </GridItem>
         );
       })}
-      <OverlayTitle titleData={currentEntry}/>
+      <OverlayTitle titleData={currentEntry} />
     </Grid>
   );
 }

@@ -24,7 +24,13 @@ function CustomPointer() {
     },
   };
   return (
-    <CursorFollow offsetX={errorMargin} offsetY={errorMargin}>
+    <CursorFollow
+      damping={100}
+      stiffness={1000}
+      nameClass={styles.blendMode}
+      offsetX={errorMargin}
+      offsetY={errorMargin}
+    >
       <motion.div
         variants={variants}
         animate={hovered ? "hovered" : "default"}

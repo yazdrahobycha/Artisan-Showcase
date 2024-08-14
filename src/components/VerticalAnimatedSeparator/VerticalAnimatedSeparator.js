@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import styles from "./animatedseparator.module.css";
+import styles from "./verticalanimatedseparator.module.css";
 
-function AnimatedSeparator({
+function VerticalAnimatedSeparator({
   delay = 0,
   stiffness = 50,
   damping = 2,
@@ -19,12 +19,12 @@ function AnimatedSeparator({
       {...delegated}
       key={"separator" + delay}
       initial={{
-        width: 0,
+        height: 0,
       }}
       animate={{
-        width: "100%",
+        height: "100%",
         transition: {
-          width: {
+          height: {
             type: "spring",
             stiffness,
             damping,
@@ -33,9 +33,9 @@ function AnimatedSeparator({
         },
       }}
       exit={{
-        width: 0,
+        height: 0,
         transition: {
-          width: {
+          height: {
             type: "spring",
             stiffness,
             damping,
@@ -48,4 +48,4 @@ function AnimatedSeparator({
   );
 }
 
-export default AnimatedSeparator;
+export default VerticalAnimatedSeparator;

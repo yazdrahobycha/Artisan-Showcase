@@ -1,0 +1,8 @@
+
+@media (min-width: 768px) {
+    .gridItem {
+        height: 100%;
+        display: grid;
+        grid-template-columns: calc(100% - 2px) auto;
+    }
+}

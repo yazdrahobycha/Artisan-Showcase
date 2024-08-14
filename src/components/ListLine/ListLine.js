@@ -7,20 +7,29 @@ import Title from "../Title";
 import UtilityLink from "../UtilityLink";
 
 function ListLine(
-  { itemData, index, startExitAnimation, inline, columnClass = "" },
+  {
+    itemData,
+    index,
+    startExitAnimation,
+    inline,
+    columnClass = "",
+    lineClass = "",
+    ...delegated
+  },
   ref
 ) {
   const WrapperTag = inline ? "div" : UtilityLink;
 
   return (
     <div
+      {...delegated}
       ref={ref}
       className={`${styles.lineWrapper} ${
         inline ? styles.inline : ""
       } ${columnClass}`}
     >
       <WrapperTag
-        className={styles.secondLineWrapper}
+        className={`${styles.secondLineWrapper} ${lineClass}`}
         href={!inline ? `/${itemData.name}` : undefined}
       >
         <Title>{itemData.name}</Title>

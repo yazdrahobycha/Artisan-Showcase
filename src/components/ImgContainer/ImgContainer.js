@@ -2,9 +2,9 @@ import React from 'react';
 import styles from './imgcontainer.module.css'
 import Image from 'next/image';
 
-function ImgContainer({style, size, ...delegated}) {
+function ImgContainer({ clsName, ...delegated}) {
   return (
-    <div style={style} className={styles.wrapper}>
+    <div className={`${styles.wrapper} ${clsName}`}>
       <Image
         {...delegated}
         // src={`/img/${entry.name}.png`}

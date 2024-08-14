@@ -1,0 +1,16 @@
+.itemWrapper {
+    padding: 21vw;
+}
+
+.itemImage {
+    object-fit: cover;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    .itemWrapper {
+        padding: 70px;
+        display: grid;
+        place-content: center;
+    }
+}
