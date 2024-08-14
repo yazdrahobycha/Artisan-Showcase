@@ -6,6 +6,7 @@ import GridItem from "../GridItem";
 import Image from "next/image";
 import OverlayTitle from "../OverlayTitle";
 import styles from "./pressdisplay.module.css";
+import UtilityLink from "../UtilityLink";
 
 function PressDisplay() {
   const [currentEntry, setCurrentEntry] = useState(null);
@@ -45,7 +46,7 @@ function PressDisplay() {
               ref={(ref) => imagesRefsArray.current.push(ref)}
               data-name={entry.name}
               data-date={entry.date}
-              className={styles.itemWrapper}
+              className={`${styles.itemWrapper} line`}
             >
               <Image
                 className={styles.itemImage}

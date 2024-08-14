@@ -30,7 +30,7 @@ function List({ startExitAnimation }) {
         {PLACEHOLDER_DATA.map((entry, i) => {
           return (
             <ListLine
-              lineClass={styles.line}
+              lineClass={'line'}
               onMouseEnter={() => setHoveredLine(entry.name)}
               startExitAnimation={startExitAnimation}
               key={entry.name + i}
