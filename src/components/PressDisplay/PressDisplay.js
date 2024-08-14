@@ -42,7 +42,8 @@ function PressDisplay() {
       {PRESS_DATA.map((entry) => {
         return (
           <GridItem key={entry.name + entry.date}>
-            <div
+            <UtilityLink
+              href={entry.link}
               ref={(ref) => imagesRefsArray.current.push(ref)}
               data-name={entry.name}
               data-date={entry.date}
@@ -53,7 +54,7 @@ function PressDisplay() {
                 alt={entry.name}
                 src={entry.image}
               />
-            </div>
+            </UtilityLink>
           </GridItem>
         );
       })}
