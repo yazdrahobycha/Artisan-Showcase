@@ -13,14 +13,16 @@ function Display() {
       {PLACEHOLDER_DATA.map((entry) => {
         return (
           <GridItem>
-            <div className={styles.displayItem}>
+            <div className="line">
               <UtilityLink href={`/${entry.name}`}>
-                <Title>{entry.name}</Title>
-                <ImgContainer
-                  clsName={styles.imgContainer}
-                  src={`/img/${entry.name}.png`}
-                  alt={`Picture of the ${entry.name} furniture`}
-                />
+                <div className={`${styles.displayItem}`}>
+                  <Title>{entry.name}</Title>
+                  <ImgContainer
+                    clsName={styles.imgContainer}
+                    src={`/img/${entry.name}.png`}
+                    alt={`Picture of the ${entry.name} furniture`}
+                  />
+                </div>
               </UtilityLink>
             </div>
           </GridItem>

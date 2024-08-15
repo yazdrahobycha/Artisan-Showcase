@@ -4,7 +4,7 @@ import UtilityLink from "../UtilityLink";
 
 function Footer() {
   return (
-    <footer>
+    <footer className={styles.footer}>
       <div className={styles.wrapper}>
         <ul className={styles.list}>
           <li>
@@ -16,7 +16,7 @@ function Footer() {
             </UtilityLink>
           </li>
         </ul>
-        Artisan Crafter based in Kolomyya
+        <span>Artisan Crafter based in Kolomyya</span>
         <ul className={styles.list}>
           <li>Cookies</li>
           <li>©2024</li>

@@ -3,9 +3,9 @@ import AnimatedSeparator from "../AnimatedSeparator";
 import styles from "./gridItem.module.css";
 import VerticalAnimatedSeparator from "../VerticalAnimatedSeparator";
 
-function GridItem({ children, indexSeparatorDelay }) {
+function GridItem({ children, indexSeparatorDelay, ...delegated }) {
   return (
-    <div>
+    <div {...delegated}>
       <div className={styles.gridItem}>
         {children}
         <VerticalAnimatedSeparator />

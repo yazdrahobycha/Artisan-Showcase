@@ -1,8 +1,13 @@
+.gridItem {
+    overflow: hidden;
+}
+
 
 @media (min-width: 768px) {
     .gridItem {
         height: 100%;
         display: grid;
-        grid-template-columns: calc(100% - 2px) auto;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: 1fr;
     }
 }

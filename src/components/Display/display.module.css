@@ -17,5 +17,7 @@
 @media (min-width: 768px) {
     .imgContainer {
         padding: 5vw;
+        margin-top: 50px;
+        margin-bottom: 50px;
     }
 }
