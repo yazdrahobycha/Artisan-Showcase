@@ -2,4 +2,5 @@
     background-color: var(--color-secondary);
     position:  relative;
     z-index: 35;
+    overflow: hidden;
 }

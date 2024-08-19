@@ -32,7 +32,7 @@ function ListLine(
         <div className={styles.category}>{itemData.category}</div>
       </WrapperTag>
       {!inline && (
-        <AnimatedSeparator delay={0.08 * index} stiffness={20} damping={7} />
+        <AnimatedSeparator delay={0.08 * index} stiffness={15} damping={7} />
       )}
     </div>
   );

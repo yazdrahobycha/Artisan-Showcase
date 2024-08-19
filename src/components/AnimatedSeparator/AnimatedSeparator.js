@@ -41,11 +41,25 @@ function AnimatedSeparator({
           }}
           animate={{
             [animationDimention]: "100%",
-            transition: transitionObj,
+            transition: {
+              [animationDimention]: {
+                type: "spring",
+                stiffness,
+                damping,
+                delay,
+              },
+            },
           }}
           exit={{
             [animationDimention]: 0,
-            transition: transitionObj,
+            transition: {
+              [animationDimention]: {
+                type: "spring",
+                stiffness: 30,
+                damping: 10,
+                delay: 0,
+              },
+            },
           }}
           className={styles.separator}
         />

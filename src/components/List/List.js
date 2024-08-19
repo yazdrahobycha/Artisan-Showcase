@@ -19,7 +19,7 @@ function List() {
         className={styles.columnNames}
         columnClass={styles.columnNames}
       />
-      <AnimatedSeparator delay={0} stiffness={50} damping={10} />
+      <AnimatedSeparator delay={0} stiffness={20} damping={8} />
       <div onMouseLeave={() => setHoveredLine(false)}>
         {PLACEHOLDER_DATA.map((entry, i) => {
           return (
