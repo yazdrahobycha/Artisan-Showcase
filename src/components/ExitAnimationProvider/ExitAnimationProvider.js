@@ -1,5 +1,5 @@
-'use client';
-import React, { useContext } from 'react';
+"use client";
+import React, { useState } from "react";
 
 export const ExitAnimationContext = React.createContext();
 
@@ -7,7 +7,9 @@ function ExitAnimationProvider({ children }) {
   const [startExitAnimation, setStartExitAnimation] = useState(false);
 
   return (
-    <ExitAnimationContext.Provider value={{ startExitAnimation, setStartExitAnimation }}>
+    <ExitAnimationContext.Provider
+      value={{ startExitAnimation, setStartExitAnimation }}
+    >
       {children}
     </ExitAnimationContext.Provider>
   );

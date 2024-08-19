@@ -194,3 +194,5 @@ export const COLUMN_NAMES = {
   year: "Year",
   client: "Client",
 };
+
+export const DELAY_EXIT = 1500;

@@ -5,6 +5,7 @@ import AnimatedSeparator from "../AnimatedSeparator";
 import { AnimatePresence } from "framer-motion";
 import Title from "../Title";
 import UtilityLink from "../UtilityLink";
+import { DELAY_EXIT } from "@/constans";
 
 function ListLine(
   {
@@ -29,6 +30,7 @@ function ListLine(
       } ${columnClass}`}
     >
       <WrapperTag
+        delayTime={DELAY_EXIT}
         className={`${styles.secondLineWrapper} ${lineClass}`}
         href={!inline ? `/${itemData.name}` : undefined}
       >

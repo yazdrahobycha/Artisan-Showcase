@@ -21,6 +21,7 @@ function ChooseViewList({
           }}
           active={displayType === itemsType}
           key={itemsType + i}
+          asButton
         >
           {itemsType}
       </BulletLi>

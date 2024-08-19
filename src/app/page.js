@@ -3,21 +3,24 @@ import List from "@/components/List";
 import Display from "@/components/Display";
 import styles from "./page.module.css";
 import Header from "@/components/Header";
-import { useRef, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import useTopBottomIntersection from "@/hooks/useTopBottomIntersection";
 import { useDelayedCallback } from "@/hooks/useDelayedCallback";
 import ChooseViewList from "@/components/ChooseViewList";
+import { DELAY_EXIT } from "@/constans";
+import { ExitAnimationContext } from "@/components/ExitAnimationProvider";
 
 export default function Home() {
   const [displayType, setDisplayType] = useState("List");
-  const [startExitAnimation, setStartExitAnimation] = useState(false);
+  const { startExitAnimation, setStartExitAnimation } =
+    useContext(ExitAnimationContext);
   const mainRef = useRef();
   const headerRef = useRef();
   const isHeaderOnMain = useTopBottomIntersection(mainRef, headerRef, 0);
 
   const delayedHandleDisplayChange = useDelayedCallback(
     handleDisplayChange,
-    1000
+    DELAY_EXIT
   );
 
   function handleDisplayChange(type) {

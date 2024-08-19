@@ -4,6 +4,7 @@ import styles from "./animatednickname.module.css";
 import UtilityLink from "../UtilityLink";
 import { motion } from "framer-motion";
 import { useMediaQuery } from "@react-hookz/web";
+import { DELAY_EXIT } from "@/constans";
 
 function AnimatedNickname({ children }) {
   const [linkIsHovered, setLinkIsHovered] = useState(false);
@@ -51,7 +52,7 @@ function AnimatedNickname({ children }) {
         onMouseLeave={handleUnhover}
         className={styles.logoLetterWrapper}
       >
-        <UtilityLink href="\">
+        <UtilityLink delayTime={DELAY_EXIT} href="\">
           <span className={styles.mainLetter}>C</span>
           <motion.span
             className={styles.slided}
@@ -84,7 +85,7 @@ function AnimatedNickname({ children }) {
           visible: { x: 0 },
         }}
       >
-        <UtilityLink href="\">
+        <UtilityLink delayTime={DELAY_EXIT} href="\">
           <span ref={secondLetterRef} className={`${styles.mainLetter}`}>
             G
           </span>
@@ -110,7 +111,7 @@ function IdleNickname({ children }) {
   return (
     <>
       <div className={styles.logoLetterWrapper}>
-        <UtilityLink href="\">
+        <UtilityLink delayTime={DELAY_EXIT} href="\">
           <span className={styles.mainLetter}>C</span>
         </UtilityLink>
       </div>
