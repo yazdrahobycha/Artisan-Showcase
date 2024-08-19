@@ -1,8 +1,4 @@
 import { ABOUT_DATA } from "@/constans";
-// import ImageCarousel from "@/components/ImageCarousel";
-// import Image from "next/image";
-// import { range } from "@/helpers/range";
-// import imageSize from "image-size";
 import AuthorPortraits from "@/components/AuthorPortraits";
 import AnimatedSeparator from "@/components/AnimatedSeparator";
 import React from "react";
@@ -24,11 +20,11 @@ export default function Home() {
         </div>
         {aboutDataKeys.map((columnKey, i) => {
           return (
-            <div className={styles.sectionWrapper} key={'section' + i}>
+            <div className={styles.sectionWrapper} key={"section" + i}>
               <h2>{columnKey}</h2>
               {ABOUT_DATA.lists[columnKey].map((columnEntry, pI) => {
                 return (
-                  <React.Fragment key={'paragraph' + pI}>
+                  <React.Fragment key={"paragraph" + pI}>
                     <p className="new-line">{columnEntry}</p>
                     <AnimatedSeparator cancelAnimation />
                   </React.Fragment>

@@ -20,7 +20,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html style={COLORS} lang="en">
-      <body className={fkDisplayAlt.className}>
+      <body style={{display: 'flex', flexDirection: 'column'}} className={fkDisplayAlt.className}>
         <CustomPointerProvider>
           {children}
           <Footer />

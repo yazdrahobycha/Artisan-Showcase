@@ -1,3 +1,4 @@
+
 import React from "react";
 import ImageCarousel from "../ImageCarousel";
 import Image from "next/image";
@@ -5,6 +6,7 @@ import imageSize from "image-size";
 import { range } from "@/helpers/range";
 
 function AuthorPortraits() {
+
   return (
     <ImageCarousel>
       {range(5).map((_, i) => {

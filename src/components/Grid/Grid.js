@@ -8,10 +8,6 @@ function Grid({ children, columnNum, ...delegated }) {
       <AnimatedSeparator delay={0.5} stiffness={30} damping={10} />
       <div className={styles.gridWrapper}>
         {children}
-        {children}
-        {children}
-        {children}
-        {children}
       </div>
     </div>
   );

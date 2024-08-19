@@ -1,6 +1,5 @@
 .content {
     color: var(--color-neutral);
-    margin-bottom: 33vw;
 }
 
 .sectionWrapper {
@@ -19,4 +18,48 @@
  font-size: 1rem;
  line-height: 1.1;
  padding: 7px 0;
+}
+
+@media (min-width: 580px) {
+    .content h2 {
+        font-size: 4.2vw;
+        padding-bottom: 2vw;
+    }
+
+    .content p {
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .content {
+        display: grid;
+        grid-template-columns: 50% repeat(3, 1fr);
+    }
+
+    .content h2 {
+        font-size: 2.5vw;
+        padding-bottom: 30px;
+    }
+
+    .content p {
+        font-size: 1.5vw;
+    }
+
+    .sectionWrapper {
+        padding: 8px 24px;
+    }
+
+    .content {
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .content h2 {
+        font-size: 2rem;
+    }
+    .content p {
+        font-size: 1rem;
+    }
 }

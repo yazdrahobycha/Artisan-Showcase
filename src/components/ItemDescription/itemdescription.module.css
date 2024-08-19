@@ -4,6 +4,8 @@
 
 .wrapper {
     padding-top: 50px;
+    max-width: 1700px;
+    margin: 0 auto;
 }
 
 .wrapper h3 {
@@ -11,6 +13,10 @@
     color: var(--color-secondary);
     margin: 0.9em 0px 0.7em;
 }
+
+/* .wrapper h3:first-of-type {
+    display: none;
+} */
 
 .wrapper p {
     color: var(--color-neutral);
@@ -26,4 +32,63 @@
 .listWrapper p {
     margin: 5vw 0;
     font-size: 4.2vw;
+}
+
+.imgContainer {
+    padding: 45%;
+}
+
+@media (min-width: 768px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .wrapper h3 {
+        font-size: 2.5vw;
+    }
+
+    .wrapper p {
+        font-size: 1.5vw;
+        line-height: 1.7vw;
+        margin-bottom: 1.5vw;
+    }
+
+    .listWrapper p {
+        font-size: 1.5vw;
+        margin: 0;
+        padding: 16px 0;
+    }   
+
+        .imgContainer {
+            padding: 50%;
+        }
+
+        .imgWrapper {
+            padding: 10%;
+            display: flex;
+        }
+}
+
+@media (min-width: 1024px) {
+    .imgContainer img{
+        padding: 0;
+        max-height: 60vh;
+    }
+
+    .wrapper p {
+        font-size: 1rem;
+        line-height: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .listWrapper p {
+        font-size: 1rem;
+        margin: 0;
+        padding: 16px 0;
+        margin-bottom: 0;
+    }
+
+    .wrapper h3 {
+        font-size: 2rem
+    }
 }

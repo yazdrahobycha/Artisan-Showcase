@@ -8,7 +8,7 @@ function ItemDescription({ entry }) {
     <div className={styles.wrapper}>
       <div className={styles.imgWrapper}>
         <ImgContainer
-          style={{ padding: "45%" }}
+        clsName={styles.imgContainer}
           src={`/img/${entry.name}.png`}
           alt={`Picture of the ${entry.name} furniture`}
           priority

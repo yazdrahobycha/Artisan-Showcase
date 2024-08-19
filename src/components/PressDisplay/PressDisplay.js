@@ -24,7 +24,6 @@ function PressDisplay() {
 
   useEffect(() => {
     if (!isSmallScreen) return;
-
     const observer = new IntersectionObserver(
       (entries) => {
         const intersectingEntry = entries.find((entry) => entry.isIntersecting);
@@ -64,7 +63,7 @@ function PressDisplay() {
             data-date={entry.date}
             style={{
               opacity:
-                currentEntry &&
+                !isSmallScreen && currentEntry &&
                 currentEntry.name !== entry.name &&
                 currentEntry.date !== entry.date
                   ? 0.5

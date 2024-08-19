@@ -1,0 +1,26 @@
+.wrapper {
+    display: flex;
+    position: relative;
+}
+
+
+.imgWrapper {
+    position: relative;
+    padding: 1.5vw 2vw;
+}
+
+.imgWrapper:not(:nth-child(3)) {
+    z-index: 1;
+}
+
+.imgWrapper:nth-child(3) {
+    z-index: 10;
+    background-color: var(--color-primary);
+}
+
+@media screen and (min-width: 1024px) {
+    .imgWrapper {
+        padding: 2vw 4vw;
+    }
+    
+}
