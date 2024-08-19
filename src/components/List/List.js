@@ -5,12 +5,11 @@ import styles from "./list.module.css";
 import { PLACEHOLDER_DATA } from "@/constans";
 import ListLine from "../ListLine";
 import AnimatedSeparator from "../AnimatedSeparator";
-import { AnimatePresence } from "framer-motion";
 import { COLUMN_NAMES } from "@/constans";
 const CursorFollow = dynamic(() => import("../CursorFollow"), { ssr: false });
 import ImgContainer from "../ImgContainer";
 
-function List({ startExitAnimation }) {
+function List() {
   const [hoveredLine, setHoveredLine] = useState(false);
   return (
     <div className={styles.listWrapper}>
@@ -18,21 +17,15 @@ function List({ startExitAnimation }) {
         inline
         itemData={COLUMN_NAMES}
         className={styles.columnNames}
-        startExitAnimation={true}
         columnClass={styles.columnNames}
       />
-      <AnimatePresence>
-        {!startExitAnimation && (
-          <AnimatedSeparator delay={0} stiffness={50} damping={10} />
-        )}
-      </AnimatePresence>
+      <AnimatedSeparator delay={0} stiffness={50} damping={10} />
       <div onMouseLeave={() => setHoveredLine(false)}>
         {PLACEHOLDER_DATA.map((entry, i) => {
           return (
             <ListLine
-              lineClass={'line'}
+              lineClass={"line"}
               onMouseEnter={() => setHoveredLine(entry.name)}
-              startExitAnimation={startExitAnimation}
               key={entry.name + i}
               index={i}
               itemData={entry}

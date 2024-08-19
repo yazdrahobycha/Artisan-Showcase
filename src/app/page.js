@@ -40,7 +40,7 @@ export default function Home() {
         />
       </Header>
       <main ref={mainRef} className={styles.main}>
-        <ItemsTag startExitAnimation={startExitAnimation} />
+        <ItemsTag />
       </main>
     </>
   );

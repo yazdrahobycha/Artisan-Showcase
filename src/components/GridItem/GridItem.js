@@ -1,14 +1,13 @@
 import React from "react";
 import AnimatedSeparator from "../AnimatedSeparator";
 import styles from "./gridItem.module.css";
-import VerticalAnimatedSeparator from "../VerticalAnimatedSeparator";
 
 function GridItem({ children, indexSeparatorDelay, ...delegated }) {
   return (
     <div {...delegated}>
       <div className={styles.gridItem}>
         {children}
-        <VerticalAnimatedSeparator />
+        <AnimatedSeparator isVertical={true} />
       </div>
       <AnimatedSeparator
         delay={0.08 * indexSeparatorDelay}

@@ -1,7 +1,5 @@
 .separator {
-    width: 100%;
     background-color: var(--color-secondary);
-    height: 2px;
     position:  relative;
     z-index: 35;
 }
