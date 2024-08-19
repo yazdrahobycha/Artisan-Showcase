@@ -4,6 +4,7 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 import { COLORS } from "@/constans";
 import CustomPointerProvider from "@/components/CustomPointerProvider";
+import ExitAnimationProvider from "@/components/ExitAnimationProvider";
 const CustomPointer = dynamic(() => import("../components/CustomPointer"), {
   ssr: false,
 });
@@ -20,11 +21,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html style={COLORS} lang="en">
-      <body style={{display: 'flex', flexDirection: 'column'}} className={fkDisplayAlt.className}>
+      <body
+        style={{ display: "flex", flexDirection: "column" }}
+        className={fkDisplayAlt.className}
+      >
         <CustomPointerProvider>
-          {children}
-          <Footer />
-          <CustomPointer/>
+          <ExitAnimationProvider>
+            {children}
+            <Footer />
+            <CustomPointer />
+          </ExitAnimationProvider>
         </CustomPointerProvider>
       </body>
     </html>

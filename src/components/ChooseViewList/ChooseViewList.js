@@ -23,7 +23,7 @@ function ChooseViewList({
           key={itemsType + i}
         >
           {itemsType}
-        </BulletLi>
+      </BulletLi>
       ))}
     </ul>
   );
