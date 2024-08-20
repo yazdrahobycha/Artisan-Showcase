@@ -2,6 +2,7 @@ import React, { forwardRef } from "react";
 import styles from "./header.module.css";
 import UtilityLink from "../UtilityLink";
 import AnimatedNickname from "../AnimatedNickname";
+import { DELAY_EXIT } from "@/constans";
 
 function Header({ showSeparator = true, children, endSlot, withBackBtn }, ref) {
   return (
@@ -16,10 +17,14 @@ function Header({ showSeparator = true, children, endSlot, withBackBtn }, ref) {
             {children}
             <ul>
               <li className={styles.listItem}>
-                <UtilityLink href="./about">About</UtilityLink>
+                <UtilityLink delayTime={DELAY_EXIT} href="./about">
+                  About
+                </UtilityLink>
               </li>
               <li className={styles.listItem}>
-                <UtilityLink href="./press">Press</UtilityLink>
+                <UtilityLink delayTime={DELAY_EXIT} href="./press">
+                  Press
+                </UtilityLink>
               </li>
             </ul>
           </div>
