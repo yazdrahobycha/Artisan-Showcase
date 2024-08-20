@@ -8,8 +8,8 @@ import { ExitAnimationContext } from "../ExitAnimationProvider";
 function AnimatedSeparator({
   isVertical,
   delay = 0,
-  stiffness = 50,
-  damping = 2,
+  stiffness = 15,
+  damping = 7,
   cancelAnimation,
   ...delegated
 }) {
@@ -57,7 +57,7 @@ function AnimatedSeparator({
                 type: "spring",
                 stiffness: 30,
                 damping: 10,
-                delay: 0,
+                delay: 0 + delay / 2,
               },
             },
           }}
