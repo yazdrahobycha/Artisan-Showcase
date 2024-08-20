@@ -27,6 +27,8 @@ function UtilityLink(
     // when theres a route transition but it is doesnt require delay
     if (delayTime === 0) {
       router.push(href);
+      // router.push(href);
+      console.log(delayTime);
 
       // early return for theres no need in animation
       return;
@@ -47,7 +49,7 @@ function UtilityLink(
       onMouseLeave={() => setHovered(false)}
       onClick={handleClick}
       onMouseEnter={() => setHovered(true)}
-      href="/"
+      href={href}
       {...params}
     >
       {children}
