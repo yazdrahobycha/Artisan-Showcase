@@ -14,12 +14,13 @@ function List() {
   return (
     <div className={styles.listWrapper}>
       <ListLine
+        index={0}
         inline
         itemData={COLUMN_NAMES}
         className={styles.columnNames}
         columnClass={styles.columnNames}
       />
-      <AnimatedSeparator delay={0} stiffness={20} damping={8} />
+      <AnimatedSeparator delay={0} stiffness={80} damping={19} />
       <div onMouseLeave={() => setHoveredLine(false)}>
         {PLACEHOLDER_DATA.map((entry, i) => {
           return (
@@ -27,7 +28,7 @@ function List() {
               lineClass={"line"}
               onMouseEnter={() => setHoveredLine(entry.name)}
               key={entry.name + i}
-              index={i}
+              index={i + 1}
               itemData={entry}
             />
           );
