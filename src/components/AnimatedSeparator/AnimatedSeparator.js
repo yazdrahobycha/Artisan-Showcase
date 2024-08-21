@@ -31,7 +31,7 @@ function AnimatedSeparator({
 
   return (
     <AnimatePresence>
-      {!startExitAnimation && (
+      {!startExitAnimation ? (
         <motion.div
           {...delegated}
           style={styleObj}
@@ -62,6 +62,12 @@ function AnimatedSeparator({
             },
           }}
           className={styles.separator}
+        />
+      ) : (
+        <div
+          key="2"
+          className={styles.separator}
+          style={{ ...styleObj, opacity: 0 }}
         />
       )}
     </AnimatePresence>

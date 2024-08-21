@@ -38,7 +38,14 @@ function CursorFollow({
     return () => {
       window.removeEventListener("mousemove", updateMousePosition);
     };
-  }, [offsetX, offsetY, isFirstRender]);
+  }, [
+    offsetX,
+    offsetY,
+    isFirstRender,
+    cursorXSpring,
+    cursorYSpring,
+    isSmallDevice,
+  ]);
 
   if (isSmallDevice) {
     return null;

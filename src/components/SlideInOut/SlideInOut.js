@@ -30,10 +30,11 @@ function SlideInOut({
   }
 
   return (
-    <AnimatePresence>
-      {!startExitAnimation && (
+    <AnimatePresence mode="wait">
+      {!startExitAnimation ? (
         <motion.div
           {...delegated}
+          key="1"
           initial={{ ...direction, opacity: 0 }}
           transition={{
             type: "spring",
@@ -46,9 +47,25 @@ function SlideInOut({
             x: 0,
             opacity: 1,
           }}
+          exit={{
+            y: "-150%",
+            opacity: 0,
+            transition: {
+              delay: 0,
+              stiffness,
+              damping,
+            },
+          }}
         >
           {children}
         </motion.div>
+      ) : (
+        // for the item not to be removed immediately after the animation is done
+        // (causing a flickering)
+        // not just remove motion item from the DOM, but replace it with a transparent placeholder
+        <div key="2" style={{ opacity: 0 }}>
+          {children}
+        </div>
       )}
     </AnimatePresence>
   );

@@ -26,5 +26,5 @@ export function useCenterIntersection(
         observer.disconnect();
       }
     };
-  }, []);
+  }, [callbackOnIntersection, elmsToObserve]);
 }

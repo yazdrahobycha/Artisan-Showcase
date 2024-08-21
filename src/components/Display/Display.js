@@ -10,9 +10,9 @@ import GridItem from "../GridItem";
 function Display() {
   return (
     <Grid columnNum={4}>
-      {PLACEHOLDER_DATA.map((entry) => {
+      {PLACEHOLDER_DATA.map((entry, i) => {
         return (
-          <GridItem>
+          <GridItem key={entry.name + i}>
             <div className="line">
               <UtilityLink href={`/${entry.name}`}>
                 <div className={`${styles.displayItem}`}>

@@ -2,6 +2,7 @@ import React, { forwardRef } from "react";
 import styles from "./header.module.css";
 import UtilityLink from "../UtilityLink";
 import AnimatedNickname from "../AnimatedNickname";
+import { DELAY_EXIT } from "@/constans";
 
 function Header({ showSeparator = true, children, endSlot, withBackBtn }, ref) {
   return (

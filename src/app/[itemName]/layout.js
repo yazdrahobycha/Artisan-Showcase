@@ -10,7 +10,7 @@ export default function Layout({ children, params }) {
     <>
       <Header
         withBackBtn
-        endSlot={<ListLine inline startExitAnimation={true} itemData={entry} />}
+        endSlot={<ListLine inline itemData={entry} />}
       >
         <BackBtn />
       </Header>

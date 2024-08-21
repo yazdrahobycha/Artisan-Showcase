@@ -16,6 +16,10 @@
     overflow: hidden;
 }
 
+.secondLineWrapper h2 {
+    width : 100vh;
+}
+
 
 
 .inline .secondLineWrapper {
@@ -25,7 +29,7 @@
 }
 
 .inline h2 {
-    font-size: 1.7rem; 
+    font-size: 1.7rem;
 }
 
 .inline {
@@ -46,6 +50,9 @@
         font-size: 3vw;
         line-height: 2;
     }
+
+    
+
     .secondLineWrapper {
         row-gap: 0px;
     }
@@ -61,7 +68,12 @@
         display: grid;
         grid-template-columns: 50% 2.5fr 1fr 1fr;
         padding: 9px 24px 8px;
+        align-items: center;
     }
+
+.secondLineWrapper h2 {
+    width: au;
+}
 
     .category {
         text-align: right;

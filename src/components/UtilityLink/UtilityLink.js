@@ -4,6 +4,7 @@ import Link from "next/link";
 import { UpdateCustomPointerContext } from "../CustomPointerProvider";
 import { ExitAnimationContext } from "../ExitAnimationProvider";
 import { useRouter } from "next/navigation";
+import sleep from "@/helpers/sleep";
 
 function UtilityLink(
   { children, asButton, delayTime = 0, href, ...params },
@@ -14,40 +15,42 @@ function UtilityLink(
     useContext(ExitAnimationContext);
   const setHovered = useContext(UpdateCustomPointerContext);
   const Tag = asButton ? "button" : Link;
+  // const handleClick = (e) => {
+  //   // prevent default href behavior
+  //   e.preventDefault();
+  //   // after clicking make the custom pointer small
+  //   setHovered(false);
+  //   // in case is clicked while animating and if clicked when it is a button
+  //   // and doesnt need a delayed routing
+  //   if (startExitAnimation || asButton) {
+  //     return;
+  //   }
 
-  function handleClick(e) {
-    // after clicking make the custom pointer small
-    setHovered(false);
-    // in case is clicked while animating and if clicked when it is a button
-    // and doesnt need a delayed routing
-    if (startExitAnimation || asButton) {
-      return;
-    }
+  //   // when theres a route transition but it is doesnt require delay
+  //   // if (delayTime === 0) {
+  //   //   router.push(href);
+  //   //   // early return for theres no need in animation
+  //   //   return;
+  //   // }
+  //   // give command to start exiting animation
+  //   setStartExitAnimation(true);
 
-    // when theres a route transition but it is doesnt require delay
-    if (delayTime === 0) {
-      router.push(href);
-
-      // early return for theres no need in animation
-      return;
-    }
-    // give command to start exiting animation
-    setStartExitAnimation(true);
-
-    //setting a route transition after delay time and reseting the animation state
-    setTimeout(() => {
-      router.push(href);
-      setStartExitAnimation(false);
-    }, delayTime);
-  }
+  //   //setting a route transition after delay time and reseting the animation state after some delay
+  //   // in case the page will load only after the second animation loop that set exit state to true
+  //   // and shows contents of previous page once again
+  //   // await sleep(delayTime);
+  //   router.push(href);
+  //   // await sleep(300);
+  //   setStartExitAnimation(false);
+  // };
 
   return (
     <Tag
       ref={ref}
       onMouseLeave={() => setHovered(false)}
-      onClick={handleClick}
+      // onClick={(e) => handleClick(e)}
       onMouseEnter={() => setHovered(true)}
-      href="/"
+      href={href}
       {...params}
     >
       {children}

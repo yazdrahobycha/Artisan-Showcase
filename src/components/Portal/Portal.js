@@ -16,7 +16,7 @@ function Portal({ children }) {
     return () => {
       host.remove();
     };
-  }, []);
+  }, [id]);
 
   if (!host) {
     return null;

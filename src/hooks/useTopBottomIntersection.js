@@ -21,7 +21,7 @@ export default function useTopBottomIntersection(
 
     window.addEventListener("scroll", checkIntersection);
     return () => removeEventListener("scroll", checkIntersection);
-  }, [isElementsIntersecting]);
+  }, [isElementsIntersecting, elem1Ref, elem2Ref, intersectionMargin]);
 
   return isElementsIntersecting;
 }

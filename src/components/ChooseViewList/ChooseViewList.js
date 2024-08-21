@@ -5,8 +5,7 @@ import styles from './chooseviewlist.module.css'
 function ChooseViewList({
   displayType,
   delayedHandleDisplayChange,
-  startExitAnimation,
-  setStartExitAnimation,
+  startExitAnimation
 }) {
   return (
     <ul className={styles.listWrapper}>
@@ -14,14 +13,12 @@ function ChooseViewList({
         <BulletLi
           className={styles.listItem}
           onClick={() => {
-            setStartExitAnimation(true);
             if (!startExitAnimation) {
               delayedHandleDisplayChange(itemsType);
             }
           }}
           active={displayType === itemsType}
           key={itemsType + i}
-          asButton
         >
           {itemsType}
       </BulletLi>

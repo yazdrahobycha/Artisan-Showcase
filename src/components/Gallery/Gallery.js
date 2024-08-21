@@ -12,7 +12,7 @@ function Gallery({ imagesNum, entryName }) {
       {range(imagesNum).map((_, i) => {
         var dimensions = imageSize(`public/img/${entryName}/${i}.png`);
         return (
-          <div className={styles.gridWrapper}>
+          <div key={i} className={styles.gridWrapper}>
             <div
               style={{ gridColumn: placeholderSizes[i], marginBottom: "21vw" }}
             >
