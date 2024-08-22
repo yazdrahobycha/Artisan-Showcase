@@ -1,44 +1,25 @@
-'use client';
-import React, { useContext } from "react";
+"use client";
+import React from "react";
 import { motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
 import { ExitAnimationContext } from "../ExitAnimationProvider";
 
-function SlideInOut({
+function OpacityReveal({
   children,
   delay = 0,
   stiffness = 150,
   damping = 30,
-  from = "top",
-  secondDirection,
   ...delegated
 }) {
-  const { startExitAnimation } = useContext(ExitAnimationContext);
-
-  const directions = {
-    top: { y: "-150%" },
-    bottom: { y: "150%" },
-    left: { x: "-30%" },
-    right: { x: "30%" },
-  };
-
-  let direction = directions[from];
-  if (secondDirection) {
-    direction = {
-      ...direction,
-      ...directions[secondDirection],
-    };
-  }
+  const { startExitAnimation } = React.useContext(ExitAnimationContext);
 
   return (
-    <AnimatePresence
-    mode="wait"
-    >
+    <AnimatePresence mode="wait">
       {!startExitAnimation ? (
         <motion.div
           {...delegated}
           key="1"
-          initial={{ ...direction, opacity: 0 }}
+          initial={{ opacity: 0 }}
           transition={{
             type: "spring",
             stiffness,
@@ -46,12 +27,9 @@ function SlideInOut({
             delay,
           }}
           animate={{
-            y: 0,
-            x: 0,
             opacity: 1,
           }}
           exit={{
-            y: "-150%",
             opacity: 0,
             transition: {
               delay: 0,
@@ -74,4 +52,4 @@ function SlideInOut({
   );
 }
 
-export default SlideInOut;
+export default OpacityReveal;

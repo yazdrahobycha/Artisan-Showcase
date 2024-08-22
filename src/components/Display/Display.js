@@ -6,6 +6,8 @@ import Title from "../Title";
 import ImgContainer from "../ImgContainer";
 import Grid from "../Grid";
 import GridItem from "../GridItem";
+import SlideInOut from "../SlideInOut";
+import OpacityReveal from "../OpacityReveal";
 
 function Display() {
   return (
@@ -16,12 +18,16 @@ function Display() {
             <div>
               <UtilityLink href={`/${entry.name}`}>
                 <div className={`${styles.displayItem}`}>
-                  <Title>{entry.name}</Title>
-                  <ImgContainer
-                    clsName={styles.imgContainer}
-                    src={`/img/${entry.name}.png`}
-                    alt={`Picture of the ${entry.name} furniture`}
-                  />
+                  <SlideInOut delay={0.1 * i}>
+                    <Title>{entry.name}</Title>
+                  </SlideInOut>
+                  <OpacityReveal delay={0.1 * i}>
+                    <ImgContainer
+                      clsName={styles.imgContainer}
+                      src={`/img/${entry.name}.png`}
+                      alt={`Picture of the ${entry.name} furniture`}
+                    />
+                  </OpacityReveal>
                 </div>
               </UtilityLink>
             </div>

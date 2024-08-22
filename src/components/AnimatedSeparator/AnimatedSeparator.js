@@ -22,7 +22,7 @@ function AnimatedSeparator({
   const animationDimention = isVertical ? "height" : "width";
 
   return (
-    <AnimatePresence>
+    <AnimatePresence mode="wait">
       {!startExitAnimation && (
         <motion.div
           {...delegated}
