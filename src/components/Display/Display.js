@@ -13,7 +13,7 @@ function Display() {
       {PLACEHOLDER_DATA.map((entry, i) => {
         return (
           <GridItem key={entry.name + i}>
-            <div className="line">
+            <div>
               <UtilityLink href={`/${entry.name}`}>
                 <div className={`${styles.displayItem}`}>
                   <Title>{entry.name}</Title>

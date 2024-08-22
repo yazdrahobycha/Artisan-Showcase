@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import dynamic from "next/dynamic";
 import styles from "./list.module.css";
 import { PLACEHOLDER_DATA } from "@/constans";
@@ -8,9 +8,11 @@ import AnimatedSeparator from "../AnimatedSeparator";
 import { COLUMN_NAMES } from "@/constans";
 const CursorFollow = dynamic(() => import("../CursorFollow"), { ssr: false });
 import ImgContainer from "../ImgContainer";
+import { ExitAnimationContext } from "../ExitAnimationProvider";
 
 function List() {
   const [hoveredLine, setHoveredLine] = useState(false);
+  const { startExitAnimation } = useContext(ExitAnimationContext);
   return (
     <div className={styles.listWrapper}>
       <ListLine
@@ -34,7 +36,7 @@ function List() {
           );
         })}
       </div>
-      {hoveredLine && (
+      {hoveredLine && !startExitAnimation && (
         <CursorFollow
           offsetY={50}
           offsetX={-10}

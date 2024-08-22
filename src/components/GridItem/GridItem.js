@@ -1,11 +1,17 @@
-import React from "react";
+"use client";
+import React, { useContext } from "react";
 import AnimatedSeparator from "../AnimatedSeparator";
 import styles from "./gridItem.module.css";
+import { ExitAnimationContext } from "../ExitAnimationProvider";
 
 function GridItem({ children, indexSeparatorDelay, ...delegated }) {
+  const { startExitAnimation } = useContext(ExitAnimationContext);
+  console.log("aaaa " + startExitAnimation);
   return (
     <div {...delegated}>
-      <div className={styles.gridItem}>
+      <div
+        className={`${styles.gridItem} ${!startExitAnimation ? "line" : ""} `}
+      >
         {children}
         <AnimatedSeparator isVertical={true} />
       </div>

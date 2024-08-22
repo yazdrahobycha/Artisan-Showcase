@@ -17,10 +17,14 @@ function Header({ showSeparator = true, children, endSlot, withBackBtn }, ref) {
             {children}
             <ul>
               <li className={styles.listItem}>
-                <UtilityLink href="./about">About</UtilityLink>
+                <UtilityLink delayTime={DELAY_EXIT} href="./about">
+                  About
+                </UtilityLink>
               </li>
               <li className={styles.listItem}>
-                <UtilityLink href="./press">Press</UtilityLink>
+                <UtilityLink delayTime={DELAY_EXIT} href="./press">
+                  Press
+                </UtilityLink>
               </li>
             </ul>
           </div>

@@ -1,11 +1,12 @@
 "use client";
-import React, { forwardRef } from "react";
+import React, { forwardRef, useContext } from "react";
 import styles from "./listline.module.css";
 import AnimatedSeparator from "../AnimatedSeparator";
 import Title from "../Title";
 import UtilityLink from "../UtilityLink";
 import { DELAY_EXIT } from "@/constans";
 import SlideInOut from "../SlideInOut";
+import { ExitAnimationContext } from "../ExitAnimationProvider";
 
 function ListLine(
   {
@@ -19,6 +20,7 @@ function ListLine(
   ref
 ) {
   const WrapperTag = inline ? "div" : UtilityLink;
+  const { startExitAnimation } = useContext(ExitAnimationContext);
 
   return (
     <div
@@ -29,7 +31,9 @@ function ListLine(
       } ${columnClass}`}
     >
       <WrapperTag
-        className={`${styles.secondLineWrapper} ${lineClass}`}
+        className={`${styles.secondLineWrapper} ${
+          startExitAnimation ? "" : lineClass
+        }`}
         href={!inline ? `/${itemData.name}` : undefined}
         {...(inline ? {} : { delayTime: DELAY_EXIT })}
       >
