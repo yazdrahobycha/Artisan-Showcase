@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import React, { useContext } from "react";
 import { motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
@@ -10,6 +10,7 @@ function SlideInOut({
   stiffness = 150,
   damping = 30,
   from = "top",
+  exitTo = "top",
   secondDirection,
   ...delegated
 }) {
@@ -23,6 +24,7 @@ function SlideInOut({
   };
 
   let direction = directions[from];
+  let exitDirection = directions[exitTo];
   if (secondDirection) {
     direction = {
       ...direction,
@@ -31,9 +33,7 @@ function SlideInOut({
   }
 
   return (
-    <AnimatePresence
-    mode="wait"
-    >
+    <AnimatePresence mode="wait">
       {!startExitAnimation ? (
         <motion.div
           {...delegated}
@@ -51,7 +51,7 @@ function SlideInOut({
             opacity: 1,
           }}
           exit={{
-            y: "-150%",
+            ...exitDirection,
             opacity: 0,
             transition: {
               delay: 0,
