@@ -5,10 +5,7 @@ import { usePathname } from "next/navigation";
 
 function CheckPathSeparator({ ...delegated }) {
   const path = usePathname();
-  console.log(path !== "/about");
-  return (
-    <AnimatedSeparator cancelAnimation={path !== "/about"} {...delegated} />
-  );
+  return <AnimatedSeparator cancelAnimation={path === "/"} {...delegated} />;
 }
 
 export default CheckPathSeparator;

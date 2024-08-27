@@ -4,7 +4,6 @@ import { range } from "@/helpers/range";
 import ImgContainer from "../ImgContainer";
 import imageSize from "image-size";
 import Image from "next/image";
-const placeholderSizes = ["1 / 10", "4 / 10", "1 / 7", "4 / 13"];
 
 function Gallery({ imagesNum, entryName }) {
   return (
@@ -13,13 +12,11 @@ function Gallery({ imagesNum, entryName }) {
         var dimensions = imageSize(`public/img/${entryName}/${i}.png`);
         return (
           <div key={i} className={styles.gridWrapper}>
-            <div
-              style={{ gridColumn: placeholderSizes[i], marginBottom: "21vw" }}
-            >
+            <div className={styles.columnSize}>
               <Image
                 style={{ objectFit: "cover", height: "auto" }}
                 src={`/img/${entryName}/${i}.png`}
-                alt="piska"
+                alt={`Picture of the ${entryName} furniture`}
                 width={dimensions.width}
                 height={dimensions.height}
               />

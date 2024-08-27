@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useContext } from "react";
 import { PRESS_DATA } from "@/constans";
 import Grid from "../Grid";
 import GridItem from "../GridItem";
@@ -7,11 +7,15 @@ import Image from "next/image";
 import OverlayTitle from "../OverlayTitle";
 import styles from "./pressdisplay.module.css";
 import UtilityLink from "../UtilityLink";
+import OpacityReveal from "../OpacityReveal";
+import { ExitAnimationContext } from "../ExitAnimationProvider";
 
 function PressDisplay() {
   const [currentEntry, setCurrentEntry] = useState(null);
   const [isSmallScreen, setIsSmallScreen] = useState(null);
   const imagesRefsArray = useRef([]);
+
+  const { startExitAnimation } = useContext(ExitAnimationContext);
 
   useEffect(() => {
     const handleResize = () => setIsSmallScreen(window.innerWidth <= 768);
@@ -56,30 +60,33 @@ function PressDisplay() {
           }
           key={entry.name + entry.date}
         >
-          <UtilityLink
-            href={entry.link}
-            ref={(ref) => (imagesRefsArray.current[index] = ref)}
-            data-name={entry.name}
-            data-date={entry.date}
-            style={{
-              opacity:
-                !isSmallScreen && currentEntry &&
-                currentEntry.name !== entry.name &&
-                currentEntry.date !== entry.date
-                  ? 0.5
-                  : 1,
-            }}
-            className={`line ${styles.itemWrapper}`}
-          >
-            <Image
-              className={styles.itemImage}
-              alt={entry.name}
-              src={entry.image}
-            />
-          </UtilityLink>
+          <OpacityReveal delay={1 + 0.1 * index}>
+            <UtilityLink
+              href={entry.link}
+              ref={(ref) => (imagesRefsArray.current[index] = ref)}
+              data-name={entry.name}
+              data-date={entry.date}
+              style={{
+                opacity:
+                  !isSmallScreen &&
+                  currentEntry &&
+                  currentEntry.name !== entry.name &&
+                  currentEntry.date !== entry.date
+                    ? 0.5
+                    : 1,
+              }}
+              className={`${styles.itemWrapper}`}
+            >
+              <Image
+                className={styles.itemImage}
+                alt={entry.name}
+                src={entry.image}
+              />
+            </UtilityLink>
+          </OpacityReveal>
         </GridItem>
       ))}
-      <OverlayTitle titleData={currentEntry} />
+      {!startExitAnimation && <OverlayTitle titleData={currentEntry} />}
     </Grid>
   );
 }
