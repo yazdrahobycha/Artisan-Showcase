@@ -17,8 +17,6 @@ function ImageCarousel({ children }) {
     updateSize();
     return () => window.removeEventListener("resize", updateSize);
   }, []);
-
-  console.log(isMobile);
   const Tag = isMobile ? ImageCarouselDynamic : ImageCarouselStatic;
 
   if (!isClient) {

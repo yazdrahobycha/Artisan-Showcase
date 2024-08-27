@@ -40,7 +40,7 @@ function UtilityLink(
     // in case the page will load only after the second animation loop that set exit state to true
     // and shows contents of previous page once again
     await sleep(delayTime);
-    router.push(href);
+    router.push(href + "?hash=" + Math.random());
   };
 
   return (

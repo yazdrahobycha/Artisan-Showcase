@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 export const ExitAnimationContext = React.createContext();
 
@@ -12,10 +13,14 @@ function ExitAnimationProvider({ children }) {
   //but if the page loads slowly, if we were to reset it in place, the animation of the page we
   // want to exit will appear again
   // so we need to manually observe the route change and only on the route change reset this state
-  const dynamicRoute = usePathname();
+
+  // const dynamicRoute = usePathname();
+  const params = useSearchParams();
+  const hashStr = params.get("hash");
   useEffect(() => {
+    console.log(hashStr);
     setStartExitAnimation(false);
-  }, [dynamicRoute]);
+  }, [hashStr]);
 
   return (
     <ExitAnimationContext.Provider

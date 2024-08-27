@@ -6,7 +6,6 @@ import { ExitAnimationContext } from "../ExitAnimationProvider";
 
 function GridItem({ children, indexSeparatorDelay, ...delegated }) {
   const { startExitAnimation } = useContext(ExitAnimationContext);
-  console.log("aaaa " + startExitAnimation);
   return (
     <div {...delegated}>
       <div
