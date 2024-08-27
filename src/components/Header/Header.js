@@ -3,7 +3,7 @@ import styles from "./header.module.css";
 import UtilityLink from "../UtilityLink";
 import AnimatedNickname from "../AnimatedNickname";
 import { DELAY_EXIT } from "@/constans";
-import AnimatedSeparator from "../AnimatedSeparator";
+import CheckPathSeparator from "../CheckPathSeparator";
 
 function Header({ showSeparator = true, children, endSlot, withBackBtn }, ref) {
   return (
@@ -31,7 +31,7 @@ function Header({ showSeparator = true, children, endSlot, withBackBtn }, ref) {
           </div>
         </AnimatedNickname>
       </div>
-      {showSeparator && <AnimatedSeparator stiffness={150} damping={20} />}
+      {showSeparator && <CheckPathSeparator stiffness={150} damping={20} />}
       {endSlot}
     </header>
   );
