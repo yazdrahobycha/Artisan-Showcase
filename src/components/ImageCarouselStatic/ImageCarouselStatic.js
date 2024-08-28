@@ -16,6 +16,7 @@ function ImageCarouselStatic({ children }) {
             delay: 0.5,
             stiffness: 110,
             damping: 20,
+            restDelta: 0.01,
           }}
           className={styles.imgWrapper}
           key={i}

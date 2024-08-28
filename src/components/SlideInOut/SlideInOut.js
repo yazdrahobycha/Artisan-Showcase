@@ -44,6 +44,7 @@ function SlideInOut({
             stiffness,
             damping,
             delay,
+            restDelta: 0.01,
           }}
           animate={{
             y: 0,
@@ -57,6 +58,7 @@ function SlideInOut({
               delay: 0,
               stiffness,
               damping,
+              restDelta: 0.01,
             },
           }}
         >

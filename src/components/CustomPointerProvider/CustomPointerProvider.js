@@ -1,5 +1,5 @@
 "use client";
-import React, { createContext, useContext, useState, useMemo } from "react";
+import React, { createContext, useState } from "react";
 
 export const CustomPointerContext = createContext();
 export const UpdateCustomPointerContext = createContext();

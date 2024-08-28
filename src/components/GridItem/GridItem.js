@@ -13,12 +13,12 @@ function GridItem({ children, indexSeparatorDelay, ...delegated }) {
         className={`${styles.gridItem} ${!startExitAnimation ? "line" : ""} `}
       >
         {children}
-        <AnimatedSeparator isVertical={true} />
+        <AnimatedSeparator stiffness={150} damping={30} isVertical={true} />
       </div>
       <AnimatedSeparator
         delay={0.08 * indexSeparatorDelay}
-        stiffness={10}
-        damping={3}
+        stiffness={150}
+        damping={30}
       />
     </div>
   );

@@ -58,13 +58,16 @@ function AnimatedNickname({ children }) {
             className={styles.slided}
             initial="hidden"
             animate={linkIsHovered ? "visible" : "hidden"}
-            transition={{ type: "spring", stiffness: 500, damping: 50 }}
+            transition={{
+              type: "spring",
+              stiffness: 500,
+              damping: 50,
+              restDelta: 0.01,
+            }}
             variants={{
               hidden: { x: "-150%" },
               visible: { x: 0 },
             }}
-
-            // style={{ position: "absolute", left: 0 }}
           >
             ARLOS
           </motion.span>
@@ -79,7 +82,12 @@ function AnimatedNickname({ children }) {
         className={styles.logoLetterWrapper}
         initial="hidden"
         animate={linkIsHovered ? "visible" : "hidden"}
-        transition={{ type: "spring", stiffness: 500, damping: 50 }}
+        transition={{
+          type: "spring",
+          stiffness: 500,
+          damping: 50,
+          restDelta: 0.01,
+        }}
         variants={{
           hidden: { x: `calc(100% - ${secondLetterWidth} )` },
           visible: { x: 0 },

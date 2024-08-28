@@ -25,6 +25,7 @@ function OpacityReveal({
             stiffness,
             damping,
             delay,
+            restDelta: 0.01,
           }}
           animate={{
             opacity: 1,
@@ -35,6 +36,7 @@ function OpacityReveal({
               delay: 0,
               stiffness,
               damping,
+              restDelta: 0.01,
             },
           }}
         >

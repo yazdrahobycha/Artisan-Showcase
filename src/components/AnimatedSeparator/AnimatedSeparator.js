@@ -39,6 +39,7 @@ function AnimatedSeparator({
                 stiffness,
                 damping,
                 delay,
+                restDelta: 0.01,
               },
             },
           }}
@@ -50,6 +51,7 @@ function AnimatedSeparator({
                 stiffness: 30,
                 damping: 10,
                 delay: 0 + delay / 2,
+                restDelta: 0.01,
               },
             },
           }}

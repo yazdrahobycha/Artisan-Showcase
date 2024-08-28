@@ -32,6 +32,7 @@ function RevealOnScroll({
     stiffness,
     damping,
     delay,
+    restDelta: 0.01,
   };
 
   return (
