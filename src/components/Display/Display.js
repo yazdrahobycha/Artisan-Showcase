@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./display.module.css";
-import { PLACEHOLDER_DATA } from "@/constans";
+import { DELAY_EXIT, PLACEHOLDER_DATA } from "@/constans";
 import UtilityLink from "../UtilityLink";
 import Title from "../Title";
 import ImgContainer from "../ImgContainer";
@@ -16,7 +16,7 @@ function Display() {
         return (
           <GridItem key={entry.name + i}>
             <div>
-              <UtilityLink href={`/${entry.name}`}>
+              <UtilityLink delayTime={DELAY_EXIT} href={`/${entry.name}`}>
                 <div className={`${styles.displayItem}`}>
                   <SlideInOut delay={0.1 * i}>
                     <Title>{entry.name}</Title>

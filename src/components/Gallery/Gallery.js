@@ -7,16 +7,18 @@ import Image from "next/image";
 import RevealOnScroll from "../RevealOnScroll";
 
 function Gallery({ imagesNum, entryName }) {
+  console.log(entryName);
   return (
     <div className={styles.galleryWrapper}>
       {range(imagesNum).map((_, i) => {
-        var dimensions = imageSize(`public/img/${entryName}/${i}.png`);
+        console.log(`public/img/${entryName}/${i}.png`);
+        var dimensions = imageSize(`public/img/${entryName}/${i}.jpeg`);
         return (
           <div key={i} className={styles.gridWrapper}>
             <RevealOnScroll className={styles.columnSize}>
               <Image
                 style={{ objectFit: "cover", height: "auto" }}
-                src={`/img/${entryName}/${i}.png`}
+                src={`/img/${entryName}/${i}.jpeg`}
                 alt={`Picture of the ${entryName} furniture`}
                 width={dimensions.width}
                 height={dimensions.height}

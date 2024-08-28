@@ -40,12 +40,15 @@ export const PLACEHOLDER_DATA = [
     year: "2023",
     category: "Table",
     text: [
-      "Introducing Velo, an epitome of refined design, technical mastery, and aesthetic allure. Drawing inspiration from the sleek curvature of high-performance racing bicycle handlebars, Velo seamlessly integrates this motif into its distinctive features, with gracefully bent handles at the forefront celebrating the fusion of elegance and functionality from the world of cycling.",
-      "The name “Velo” pays homage to the velodrome, a poignant nod to the initial inspiration that sparked the creation of this avant-garde piece.",
-      "Beyond being a mere furniture item, Velo stands as a living testament to Artisan’s unwavering commitment to artistry and meticulous craftsmanship. The fusion of clean, sleek lines elegantly marries traditional artisanship with a contemporary aesthetic, transforming Velo into more than just a functional piece—it’s a visual masterpiece.",
-      "The evolution of Velo spans over five years, a testament to the dedication invested in perfecting its intricate structure. This extended development process underscores our commitment to delivering a chair that not only meets but surpasses the highest standards of design excellence. Experience the culmination of craftsmanship and innovation with Velo.",
+      "The Treviso tables are grounded in architectural principles, with their inception rooted in the utilization of esteemed materials such as travertine marble. Drawing inspiration from the intricacies and proportions of classical Italian architecture, these tables strive to accentuate the inherent purity of the chosen material. The aesthetic manifestation mirrors that of a sculptural masterpiece, incorporating oval columns as foundational elements and thinner tabletops that engender a captivating interplay of volumes.",
+      "This collection encompasses two distinct models, constituting a duo of varying heights. The low table boasts a top with an artfully asymmetrical composition, while its base exudes a robust and voluminous presence, infusing dynamism into the ensemble. Conversely, the high table features a circular top and an angled base, harmoniously employing the same module as its counterpart, thus fostering visual and stylistic coherence throughout the collection.",
     ],
-    measures: ["Height: 56 cm", "Width: 54 cm", "Depth: 72 cm"],
+    measures: [
+      "Asymmetrical Coffee Table: W128 D56 H36 cm",
+      "Rounded Coffee Table: W100 D100 H40 cm",
+      "Side Table: W54 D54 H46 cm",
+    ],
+    imagesNum: 9,
   },
   {
     name: "Sirocco",
@@ -53,12 +56,12 @@ export const PLACEHOLDER_DATA = [
     year: "2023",
     category: "Seating",
     text: [
-      "Introducing Velo, an epitome of refined design, technical mastery, and aesthetic allure. Drawing inspiration from the sleek curvature of high-performance racing bicycle handlebars, Velo seamlessly integrates this motif into its distinctive features, with gracefully bent handles at the forefront celebrating the fusion of elegance and functionality from the world of cycling.",
-      "The name “Velo” pays homage to the velodrome, a poignant nod to the initial inspiration that sparked the creation of this avant-garde piece.",
-      "Beyond being a mere furniture item, Velo stands as a living testament to Artisan’s unwavering commitment to artistry and meticulous craftsmanship. The fusion of clean, sleek lines elegantly marries traditional artisanship with a contemporary aesthetic, transforming Velo into more than just a functional piece—it’s a visual masterpiece.",
-      "The evolution of Velo spans over five years, a testament to the dedication invested in perfecting its intricate structure. This extended development process underscores our commitment to delivering a chair that not only meets but surpasses the highest standards of design excellence. Experience the culmination of craftsmanship and innovation with Velo.",
+      "Sirocco chair draws inspiration from the commanding presence of the desert wind, mirroring the elegance and aerodynamics found in sleek sailing boats. Just as a boat cuts through the water with grace, our creation showcases sculpted forms and sharp angles that exude a sense of dynamic movement. The wind’s erosive nature has sculpted every surface, leaving behind smooth lines as if shaped by the forces of nature itself.",
+      "The chair’s refined volumes evoke a perfect balance and harmony, while seamless transitions between sections mirror the fluidity and agility of sailing on the open sea. Embracing the spirit of both the desert wind and sailing boats, the Sirocco chair captures a timeless essence of strength, grace, and timeless design.",
+      "Sirocco was designed together with Alejandro Ortega, as part of our former studio OrtegaGuijarro.",
     ],
-    measures: ["Height: 56 cm", "Width: 54 cm", "Depth: 72 cm"],
+    measures: ["Width: 58,5 cm", "Depth: 52 cm", "High: 76,5 cm"],
+    imagesNum: 9,
   },
   {
     name: "Udiya",
@@ -66,12 +69,12 @@ export const PLACEHOLDER_DATA = [
     year: "2022",
     category: "Light",
     text: [
-      "Introducing Velo, an epitome of refined design, technical mastery, and aesthetic allure. Drawing inspiration from the sleek curvature of high-performance racing bicycle handlebars, Velo seamlessly integrates this motif into its distinctive features, with gracefully bent handles at the forefront celebrating the fusion of elegance and functionality from the world of cycling.",
-      "The name “Velo” pays homage to the velodrome, a poignant nod to the initial inspiration that sparked the creation of this avant-garde piece.",
-      "Beyond being a mere furniture item, Velo stands as a living testament to Artisan’s unwavering commitment to artistry and meticulous craftsmanship. The fusion of clean, sleek lines elegantly marries traditional artisanship with a contemporary aesthetic, transforming Velo into more than just a functional piece—it’s a visual masterpiece.",
-      "The evolution of Velo spans over five years, a testament to the dedication invested in perfecting its intricate structure. This extended development process underscores our commitment to delivering a chair that not only meets but surpasses the highest standards of design excellence. Experience the culmination of craftsmanship and innovation with Velo.",
+      "The Udiya portable lamp draws inspiration from the elegant Bell shape and its dynamic mobility. Featuring a practical top handle, it offers effortless portability for both indoor and outdoor settings, complemented by a faux leather handle for easy carrying.",
+      "Equipped with a warm LED light source, Udiya ensures a welcoming ambiance, and its rechargeable functionality, complete with a USB cable, ensures continuous illumination. Users have the flexibility to select from three distinct light intensities to suit their specific lighting preferences.",
+      "Udiya is versatile and suitable for indoor and covered outdoor spaces, making it a versatile lighting solution. It is designed to be child-friendly and boasts an appealing aesthetic that seamlessly integrates into any environment.",
     ],
-    measures: ["Height: 56 cm", "Width: 54 cm", "Depth: 72 cm"],
+    measures: ["W: 20cm", "D: 20cm", "H: 24cm"],
+    imagesNum: 5,
   },
   {
     name: "Villa",
@@ -79,12 +82,17 @@ export const PLACEHOLDER_DATA = [
     year: "2022",
     category: "Table",
     text: [
-      "Introducing Velo, an epitome of refined design, technical mastery, and aesthetic allure. Drawing inspiration from the sleek curvature of high-performance racing bicycle handlebars, Velo seamlessly integrates this motif into its distinctive features, with gracefully bent handles at the forefront celebrating the fusion of elegance and functionality from the world of cycling.",
-      "The name “Velo” pays homage to the velodrome, a poignant nod to the initial inspiration that sparked the creation of this avant-garde piece.",
-      "Beyond being a mere furniture item, Velo stands as a living testament to Artisan’s unwavering commitment to artistry and meticulous craftsmanship. The fusion of clean, sleek lines elegantly marries traditional artisanship with a contemporary aesthetic, transforming Velo into more than just a functional piece—it’s a visual masterpiece.",
-      "The evolution of Velo spans over five years, a testament to the dedication invested in perfecting its intricate structure. This extended development process underscores our commitment to delivering a chair that not only meets but surpasses the highest standards of design excellence. Experience the culmination of craftsmanship and innovation with Velo.",
+      "The Villa collection generates an attractive visual game, transmitting an elegance that raises the level of any space. The Villa accent tables table were born from the search for an aesthetic balance through forms, achieving a particular beauty.",
+      "The essence of the Villa side tables is their metallic structure in thermo-lacquered black lacquer, presenting strips that intertwine between their legs giving the sensation of wanting to embrace each one of them. It offers the possibility of a top in tempered smoked glass or tempered transparent glass to better adapt to each space.",
+      "The Villa tables were designed together with Alejandro Ortega as part of our former studio OrtegaGuijarro.",
     ],
-    measures: ["Height: 56 cm", "Width: 54 cm", "Depth: 72 cm"],
+    measures: [
+      "Coffee Table 100: W100 D100 H38 cm",
+      "Coffee Table 70: W70 D70 H45 cm",
+      "Side Table 55: W55 D55 H50 cm",
+      "Side Table 45: W45 D45 H55 cm",
+    ],
+    imagesNum: 5,
   },
 ];
 
@@ -201,7 +209,7 @@ export const GRID_SIZES = {
   mobile: [
     "1 / 13",
     "4 / 10",
-    "1 / 7",
+    "1 / 17",
     "4 / 13",
     "3 / 11",
     "1 / 10",
