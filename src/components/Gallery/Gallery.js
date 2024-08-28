@@ -4,6 +4,7 @@ import { range } from "@/helpers/range";
 import ImgContainer from "../ImgContainer";
 import imageSize from "image-size";
 import Image from "next/image";
+import RevealOnScroll from "../RevealOnScroll";
 
 function Gallery({ imagesNum, entryName }) {
   return (
@@ -12,7 +13,7 @@ function Gallery({ imagesNum, entryName }) {
         var dimensions = imageSize(`public/img/${entryName}/${i}.png`);
         return (
           <div key={i} className={styles.gridWrapper}>
-            <div className={styles.columnSize}>
+            <RevealOnScroll className={styles.columnSize}>
               <Image
                 style={{ objectFit: "cover", height: "auto" }}
                 src={`/img/${entryName}/${i}.png`}
@@ -20,7 +21,7 @@ function Gallery({ imagesNum, entryName }) {
                 width={dimensions.width}
                 height={dimensions.height}
               />
-            </div>
+            </RevealOnScroll>
           </div>
         );
       })}
