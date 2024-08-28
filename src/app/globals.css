@@ -144,3 +144,23 @@ ul {
  body {
   min-height: 100vh;
  }
+
+ /* width */
+ ::-webkit-scrollbar {
+   width: 3px;
+ }
+
+ /* Track */
+ ::-webkit-scrollbar-track {
+   background: none;
+ }
+
+ /* Handle */
+ ::-webkit-scrollbar-thumb {
+   background: var(--color-secondary);
+ }
+
+ /* Handle on hover */
+ ::-webkit-scrollbar-thumb:hover {
+   background: none;
+ }
