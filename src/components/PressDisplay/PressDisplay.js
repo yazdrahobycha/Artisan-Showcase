@@ -6,7 +6,6 @@ import GridItem from "../GridItem";
 import Image from "next/image";
 import OverlayTitle from "../OverlayTitle";
 import styles from "./pressdisplay.module.css";
-import UtilityLink from "../UtilityLink";
 import OpacityReveal from "../OpacityReveal";
 import { ExitAnimationContext } from "../ExitAnimationProvider";
 
@@ -61,8 +60,7 @@ function PressDisplay() {
           key={entry.name + entry.date}
         >
           <OpacityReveal delay={1 + 0.1 * index}>
-            <UtilityLink
-              href={entry.link}
+            <a
               ref={(ref) => (imagesRefsArray.current[index] = ref)}
               data-name={entry.name}
               data-date={entry.date}
@@ -76,13 +74,16 @@ function PressDisplay() {
                     : 1,
               }}
               className={`${styles.itemWrapper}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              href={entry.link}
             >
               <Image
                 className={styles.itemImage}
                 alt={entry.name}
                 src={entry.image}
               />
-            </UtilityLink>
+            </a>
           </OpacityReveal>
         </GridItem>
       ))}
