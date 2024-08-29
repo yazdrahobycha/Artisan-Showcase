@@ -20,7 +20,7 @@ function RevealOnScroll({
     if (isInView) {
       controls.start("visible");
     }
-  }, [isInView]);
+  }, [isInView, controls]);
 
   const variants = {
     hidden: { opacity: 0, y: 150 },

@@ -15,15 +15,18 @@ function UtilityLink(
     useContext(ExitAnimationContext);
   const setHovered = useContext(UpdateCustomPointerContext);
   const Tag = asButton ? "button" : Link;
-
   const handleClick = async (e) => {
+    console.log("." + window.location.pathname === href);
     // prevent default href behavior
     e.preventDefault();
     // after clicking make the custom pointer small
-    setHovered(false);
     // in case is clicked while animating and if clicked when it is a button
     // and doesnt need a delayed routing
-    if (startExitAnimation || asButton) {
+    if (
+      startExitAnimation ||
+      asButton ||
+      "." + window.location.pathname === href
+    ) {
       return;
     }
 
@@ -40,7 +43,7 @@ function UtilityLink(
     // in case the page will load only after the second animation loop that set exit state to true
     // and shows contents of previous page once again
     await sleep(delayTime);
-    router.push(href + "?hash=" + Math.random());
+    router.push(href);
   };
 
   return (

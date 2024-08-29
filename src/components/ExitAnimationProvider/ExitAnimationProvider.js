@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { usePathname, useSearchParams } from "next/navigation";
-import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 export const ExitAnimationContext = React.createContext();
 
@@ -15,12 +14,11 @@ function ExitAnimationProvider({ children }) {
   // so we need to manually observe the route change and only on the route change reset this state
 
   // const dynamicRoute = usePathname();
-  const params = useSearchParams();
-  const hashStr = params.get("hash");
+  const params = usePathname();
+
   useEffect(() => {
-    console.log(hashStr);
     setStartExitAnimation(false);
-  }, [hashStr]);
+  }, [params]);
 
   return (
     <ExitAnimationContext.Provider
