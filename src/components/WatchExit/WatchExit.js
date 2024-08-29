@@ -11,7 +11,7 @@ function WatchExit({ children }) {
         <React.Fragment key={1}>{children}</React.Fragment>
       ) : (
         <div key={2} style={{ opacity: 0 }}>
-          children
+          {children}
         </div>
       )}
     </AnimatePresence>

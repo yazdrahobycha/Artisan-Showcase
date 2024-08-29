@@ -1,9 +1,7 @@
 "use client";
-import React, { useContext } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import styles from "./animatedseparator.module.css";
-import { AnimatePresence } from "framer-motion";
-import { ExitAnimationContext } from "../ExitAnimationProvider";
 import WatchExit from "../WatchExit";
 
 function AnimatedSeparator({
@@ -14,7 +12,6 @@ function AnimatedSeparator({
   cancelAnimation,
   ...delegated
 }) {
-  const { startExitAnimation } = useContext(ExitAnimationContext);
   const styleObj = { [isVertical ? "width" : "height"]: "2px" };
   if (cancelAnimation) {
     return <div style={styleObj} className={styles.separator}></div>;
