@@ -29,7 +29,7 @@ function AnimatedNickname({ children }) {
     if (isSmall) {
       return;
     }
-    console.log(secondLetterRef.current.offsetWidth);
+
     setSecondLetterWidth(secondLetterRef.current.offsetWidth + "px");
 
     function handleResize() {

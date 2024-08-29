@@ -16,7 +16,6 @@ function UtilityLink(
   const setHovered = useContext(UpdateCustomPointerContext);
   const Tag = asButton ? "button" : Link;
   const handleClick = async (e) => {
-    console.log("." + window.location.pathname === href);
     // prevent default href behavior
     e.preventDefault();
     // after clicking make the custom pointer small
