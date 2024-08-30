@@ -5,6 +5,7 @@ import ImgContainer from "../ImgContainer";
 import imageSize from "image-size";
 import Image from "next/image";
 import RevealOnScroll from "../RevealOnScroll";
+import { GALLERY_DIMENSIONS } from "@/constans";
 
 function Gallery({ imagesNum, entryName }) {
   return (
@@ -18,7 +19,8 @@ function Gallery({ imagesNum, entryName }) {
                 style={{ objectFit: "cover", height: "auto" }}
                 src={`/img/${entryName}/${i}.jpeg`}
                 alt={`Picture of the ${entryName} furniture`}
-                fill
+                width={GALLERY_DIMENSIONS.width}
+                height={GALLERY_DIMENSIONS.height}
               />
             </RevealOnScroll>
           </div>
