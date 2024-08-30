@@ -7,11 +7,9 @@ import Image from "next/image";
 import RevealOnScroll from "../RevealOnScroll";
 
 function Gallery({ imagesNum, entryName }) {
-  console.log(entryName);
   return (
     <div className={styles.galleryWrapper}>
       {range(imagesNum).map((_, i) => {
-        console.log(`public/img/${entryName}/${i}.png`);
         var dimensions = imageSize(`public/img/${entryName}/${i}.jpeg`);
         return (
           <div key={i} className={styles.gridWrapper}>
