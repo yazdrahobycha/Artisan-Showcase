@@ -9,7 +9,7 @@ import RevealOnScroll from "../RevealOnScroll";
 function Gallery({ imagesNum, entryName }) {
   return (
     <div className={styles.galleryWrapper}>
-      {range(imagesNum).map((_, i) => {
+      {/* {range(imagesNum).map((_, i) => {
         var dimensions = imageSize(`public/img/${entryName}/${i}.jpeg`);
         return (
           <div key={i} className={styles.gridWrapper}>
@@ -24,7 +24,7 @@ function Gallery({ imagesNum, entryName }) {
             </RevealOnScroll>
           </div>
         );
-      })}
+      })} */}
     </div>
   );
 }
