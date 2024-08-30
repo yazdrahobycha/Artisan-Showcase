@@ -231,12 +231,3 @@ export const GRID_SIZES = {
     "9 /13",
   ],
 };
-
-const populateDimensionsData = () => {
-  var dimensions = imageSize(`public/img/Velo/0.jpeg`);
-  return dimensions;
-};
-// Call the populateData function to populate the object
-export const GALLERY_DIMENSIONS = populateDimensionsData();
-
-// Export the populated object
