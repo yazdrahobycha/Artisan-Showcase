@@ -11,7 +11,9 @@ function Gallery({ imagesNum, entryName }) {
   return (
     <div className={styles.galleryWrapper}>
       {range(imagesNum).map((_, i) => {
-        var dimensions = imageSize(`public/img/${entryName}/${i}.jpeg`);
+        var dimensions = imageSize(
+          process.cwd() + `/public/img/${entryName}/${i}.jpeg`
+        );
         return (
           <div key={i} className={styles.gridWrapper}>
             <RevealOnScroll className={styles.columnSize}>
@@ -30,5 +32,4 @@ function Gallery({ imagesNum, entryName }) {
   );
 }
 
-<ImgContainer />;
 export default Gallery;

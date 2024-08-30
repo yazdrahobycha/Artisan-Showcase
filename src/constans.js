@@ -1,5 +1,3 @@
-import imageSize from "image-size";
-
 // images for press data
 import wallpaperImg from "../public/img/press/wallpaper.jpg";
 import damnImg from "../public/img/press/damn.jpg";
