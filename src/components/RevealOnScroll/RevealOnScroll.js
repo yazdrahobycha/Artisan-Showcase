@@ -38,7 +38,7 @@ function RevealOnScroll({
   return (
     <div {...delegated} ref={ref}>
       <motion.div
-        {...delegated}
+        style={{ width: "100%" }}
         variants={variants}
         initial="hidden"
         animate={controls}
