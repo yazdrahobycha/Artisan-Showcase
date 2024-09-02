@@ -14,8 +14,9 @@ const fkDisplayAlt = localFont({
 });
 
 export const metadata = {
-  title: "Misha Makakov",
-  description: "Showcase of the Misha's Makarov work",
+  title: "Artisan Showcase",
+  description:
+    "Artisan Showcase is a platform for showcasing artisanal furniture.",
 };
 
 export default function RootLayout({ children }) {
